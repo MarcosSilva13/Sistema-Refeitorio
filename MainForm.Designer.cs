@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarCreditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarCreditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,8 +43,7 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem,
-            this.consultarToolStripMenuItem,
+            this.sistemaToolStripMenuItem,
             this.sobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -53,22 +51,28 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // cadastrarToolStripMenuItem
+            // sistemaToolStripMenuItem
             // 
-            this.cadastrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem1,
+            this.sistemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarToolStripMenuItem,
             this.adicionarCreditoToolStripMenuItem,
             this.sairToolStripMenuItem});
+            this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
+            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
+            this.sistemaToolStripMenuItem.Text = "Sistema";
+            // 
+            // cadastrarToolStripMenuItem
+            // 
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
-            this.cadastrarToolStripMenuItem.Text = "Arquivo";
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.cadastrarToolStripMenuItem.Text = "Cadastrar Aluno";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
-            // cadastrarToolStripMenuItem1
+            // adicionarCreditoToolStripMenuItem
             // 
-            this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
-            this.cadastrarToolStripMenuItem1.Text = "Cadastrar Aluno";
-            this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
+            this.adicionarCreditoToolStripMenuItem.Name = "adicionarCreditoToolStripMenuItem";
+            this.adicionarCreditoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.adicionarCreditoToolStripMenuItem.Text = "Adicionar Crédito";
             // 
             // sairToolStripMenuItem
             // 
@@ -83,18 +87,6 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
-            // adicionarCreditoToolStripMenuItem
-            // 
-            this.adicionarCreditoToolStripMenuItem.Name = "adicionarCreditoToolStripMenuItem";
-            this.adicionarCreditoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.adicionarCreditoToolStripMenuItem.Text = "Adicionar Crédito";
-            // 
-            // consultarToolStripMenuItem
-            // 
-            this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
-            this.consultarToolStripMenuItem.Size = new System.Drawing.Size(79, 21);
-            this.consultarToolStripMenuItem.Text = "Consultar ";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -105,6 +97,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Refeitório";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -115,12 +108,11 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarCreditoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
     }
 }
 
