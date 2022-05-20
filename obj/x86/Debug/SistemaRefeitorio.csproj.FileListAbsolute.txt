@@ -1,0 +1,8 @@
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\SistemaRefeitorio.exe
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\SistemaRefeitorio.pdb
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.Properties.Resources.resources
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.csproj.GenerateResource.Cache
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.exe
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.pdb
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.csprojResolveAssemblyReference.cache
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.MainForm.resources
