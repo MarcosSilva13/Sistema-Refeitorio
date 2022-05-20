@@ -74,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,7 +86,45 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Icons\icons8-salvar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-sair-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-cancelar-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-adicionar-arquivo-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-adicionar-imagem-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-salvar-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-adicionar-arquivo-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-adicionar-imagem-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-cancelar-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-sair-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-arquivo-ios-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-sair-office-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\icons8-adicionar-imagem-ios-glyph-16.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
