@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SistemaRefeitorio.Forms;
 
 namespace SistemaRefeitorio
 {
@@ -19,6 +20,12 @@ namespace SistemaRefeitorio
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            StudentForm sf = new StudentForm();
+            sf.Show();
         }
     }
 }

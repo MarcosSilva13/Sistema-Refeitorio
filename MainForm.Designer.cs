@@ -33,7 +33,7 @@
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarCréditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adicionarCreditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             // 
             this.cadastrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem1,
-            this.adicionarCréditoToolStripMenuItem,
+            this.adicionarCreditoToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
             this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(65, 21);
@@ -68,11 +68,12 @@
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
             this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(178, 22);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar Aluno";
+            this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -82,11 +83,11 @@
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
-            // adicionarCréditoToolStripMenuItem
+            // adicionarCreditoToolStripMenuItem
             // 
-            this.adicionarCréditoToolStripMenuItem.Name = "adicionarCréditoToolStripMenuItem";
-            this.adicionarCréditoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
-            this.adicionarCréditoToolStripMenuItem.Text = "Adicionar Crédito";
+            this.adicionarCreditoToolStripMenuItem.Name = "adicionarCreditoToolStripMenuItem";
+            this.adicionarCreditoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.adicionarCreditoToolStripMenuItem.Text = "Adicionar Crédito";
             // 
             // consultarToolStripMenuItem
             // 
@@ -118,7 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarCréditoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adicionarCreditoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
     }
 }
