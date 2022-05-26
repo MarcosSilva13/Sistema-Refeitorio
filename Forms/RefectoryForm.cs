@@ -7,20 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
 namespace SistemaRefeitorio.Forms
 {
-    public partial class StudentForm : Form
+    public partial class RefectoryForm : Form
     {
-        public StudentForm()
+        public RefectoryForm()
         {
             InitializeComponent();
-        }
-
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            
         }
     }
 }
