@@ -9,3 +9,17 @@ C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de P
 C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.csproj.AssemblyReference.cache
 C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.csproj.CoreCompileInputs.cache
 C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.Forms.RefectoryForm.resources
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\SistemaRefeitorio.exe.config
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\MySqlConnector.dll
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Buffers.dll
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Memory.dll
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\MySqlConnector.xml
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Buffers.xml
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Memory.xml
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.csproj.CopyComplete
