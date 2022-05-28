@@ -1,13 +1,13 @@
 ﻿using MySqlConnector;
 using System;
 using System.Windows.Forms;
+using SistemaRefeitorio.Model.Entities;
+using SistemaRefeitorio.Model.SQL;
 
 namespace SistemaRefeitorio.Forms
 {
     public partial class StudentForm : Form
     {
-        MySqlConnection Conexao;
-        string data_soucer = "DATABASE=refeitorio; port=3306; SERVER=localhost; username=root; password=Kurorotepshi_13";
         public StudentForm()
         {
             InitializeComponent();
@@ -17,36 +17,24 @@ namespace SistemaRefeitorio.Forms
         private void btnNovo_Click(object sender, EventArgs e)
         {
             New();
-           /* try
-            {
-                Conexao = new MySqlConnection(data_soucer);
-
-                string sql = "INSERT INTO students (raStudent, name, email, cpf)" +
-                        "VALUES" + "('" + tbRa.Text + "', '" + tbNome.Text + "', '" + tbEmail.Text + "', '" + mtbCpf.Text + "')";
-
-                MySqlCommand cmd = new MySqlCommand(sql, Conexao);
-
-                Conexao.Open();
-
-                cmd.ExecuteReader();
-
-                MessageBox.Show("Dados inseridos com sucesso!");
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                Conexao.Close();
-            } */
-            
+       
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Save();
+           Student sf = new Student(Convert.ToInt32(tbRa.Text), tbNome.Text, tbEmail.Text, mtbCpf.Text, mtbTelefone.Text);
+           StudentSQL sfSQL = new StudentSQL();
+           
+            if(sfSQL.Insert(sf) == 1)
+            {
+                MessageBox.Show("Dados inseridos com sucesso!");
+                Save();
+            }
+            else
+            {
+                MessageBox.Show("Ocorreu um erro!");
+            } 
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -97,7 +85,6 @@ namespace SistemaRefeitorio.Forms
             btnCancelar.Enabled = true;
             btnAddFoto.Enabled = true;
             
-
         }
 
         private void Cancel()
