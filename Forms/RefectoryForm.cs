@@ -15,5 +15,10 @@ namespace SistemaRefeitorio.Forms
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblRelogio.Text = DateTime.Now.ToString("T");
+        }
     }
 }

@@ -148,12 +148,6 @@ namespace SistemaRefeitorio.Forms
 
         private void Save()
         {
-            tbRa.Text = String.Empty;
-            tbNome.Text = String.Empty;
-            tbEmail.Text = String.Empty;
-            mtbCpf.Text = String.Empty;
-            mtbTelefone.Text = String.Empty;
-
             tbRa.Enabled = true;
             tbNome.Enabled = false;
             tbEmail.Enabled = false;
@@ -165,6 +159,7 @@ namespace SistemaRefeitorio.Forms
             btnEditar.Enabled = false;
             btnCancelar.Enabled = false;
             btnAddFoto.Enabled = false;
+            btnPesquisar.Enabled = true;
             
         }
 

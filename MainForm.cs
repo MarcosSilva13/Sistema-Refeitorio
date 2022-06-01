@@ -38,6 +38,7 @@ namespace SistemaRefeitorio
 
         private void CafeDaManhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            rf.Text = "Refeitório - Café da manhã";
             rf.ShowDialog();
         }
 
