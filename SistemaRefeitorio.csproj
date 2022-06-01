@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\CreditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreditForm.Designer.cs">
+      <DependentUpon>CreditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\RefectoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,9 +96,13 @@
     </Compile>
     <Compile Include="Model\Connection.cs" />
     <Compile Include="Model\Entities\Student.cs" />
+    <Compile Include="Model\SQL\CreditSQL.cs" />
     <Compile Include="Model\SQL\StudentSQL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CreditForm.resx">
+      <DependentUpon>CreditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RefectoryForm.resx">
       <DependentUpon>RefectoryForm.cs</DependentUpon>
     </EmbeddedResource>

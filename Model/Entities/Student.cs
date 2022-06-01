@@ -14,7 +14,13 @@ namespace SistemaRefeitorio.Model.Entities
         public string Email { get; set; }        public string Cpf { get; set; }        public string Telephone { get; set; }        public int CoffeCredit { get; set; }        public int LunchCredit { get; set; }        public int DinnerCredit { get; set; }        //public byte[] Picture { get; set; }        //atualizar os contrutores também com essa propriedade        public Student(){ }        public Student(int raStudent)
         {
             RaStudent = raStudent;
-        }        public Student(int raStudent, string name, string email, string cpf, string telephone)
+        }        public Student(int raStudent, int coffeCredit, int lunchCredit, int dinnerCredit)
+        {
+            RaStudent = raStudent;
+            CoffeCredit = coffeCredit;
+            LunchCredit = lunchCredit;
+            DinnerCredit = dinnerCredit;
+        }        public Student(int raStudent, string name, string email, string cpf, string telephone)
         {
             RaStudent = raStudent;
             Name = name;

@@ -78,6 +78,7 @@
             this.CadastrarCreditoToolStripMenuItem.Name = "CadastrarCreditoToolStripMenuItem";
             this.CadastrarCreditoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.CadastrarCreditoToolStripMenuItem.Text = "Cadastrar Crédito";
+            this.CadastrarCreditoToolStripMenuItem.Click += new System.EventHandler(this.CadastrarCreditoToolStripMenuItem_Click);
             // 
             // SairToolStripMenuItem
             // 
@@ -99,20 +100,20 @@
             // CafeDaManhaToolStripMenuItem
             // 
             this.CafeDaManhaToolStripMenuItem.Name = "CafeDaManhaToolStripMenuItem";
-            this.CafeDaManhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.CafeDaManhaToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.CafeDaManhaToolStripMenuItem.Text = "Café da manhã";
             this.CafeDaManhaToolStripMenuItem.Click += new System.EventHandler(this.CafeDaManhaToolStripMenuItem_Click);
             // 
             // AlmocoToolStripMenuItem
             // 
             this.AlmocoToolStripMenuItem.Name = "AlmocoToolStripMenuItem";
-            this.AlmocoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.AlmocoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.AlmocoToolStripMenuItem.Text = "Almoço";
             // 
             // JantarToolStripMenuItem
             // 
             this.JantarToolStripMenuItem.Name = "JantarToolStripMenuItem";
-            this.JantarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.JantarToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.JantarToolStripMenuItem.Text = "Jantar";
             // 
             // SobreToolStripMenuItem

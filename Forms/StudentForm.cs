@@ -105,19 +105,6 @@ namespace SistemaRefeitorio.Forms
 
         }
 
-        private void StudentForm_Load(object sender, EventArgs e)
-        {
-            tbNome.Enabled = false;
-            tbEmail.Enabled = false;
-            mtbCpf.Enabled = false;
-            mtbTelefone.Enabled = false;
-
-            btnSalvar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnCancelar.Enabled = false;
-            btnAddFoto.Enabled = false;
-        }
-
         private void New()
         {
             tbRa.Text = String.Empty;
@@ -127,6 +114,7 @@ namespace SistemaRefeitorio.Forms
             mtbTelefone.Text = String.Empty;
 
             tbRa.Enabled = true;
+            tbRa.Focus();
             tbNome.Enabled = true;
             tbEmail.Enabled = true;
             mtbCpf.Enabled = true;
@@ -137,6 +125,7 @@ namespace SistemaRefeitorio.Forms
             btnEditar.Enabled = false;
             btnCancelar.Enabled = true;
             btnAddFoto.Enabled = true;
+            btnPesquisar.Enabled = true;
             
         }
 
@@ -153,6 +142,7 @@ namespace SistemaRefeitorio.Forms
             btnEditar.Enabled = false;
             btnCancelar.Enabled = false;
             btnAddFoto.Enabled = false;
+            btnPesquisar.Enabled = true;
            
         }
 
@@ -191,6 +181,7 @@ namespace SistemaRefeitorio.Forms
             btnEditar.Enabled = false;
             btnCancelar.Enabled = true;
             btnAddFoto.Enabled = true;
+            btnPesquisar.Enabled = false;
             
         }
 
@@ -206,9 +197,10 @@ namespace SistemaRefeitorio.Forms
             btnEditar.Enabled = true;
             btnCancelar.Enabled = true;
             btnSalvar.Enabled = false;
+            btnAddFoto.Enabled = false;
+            btnPesquisar.Enabled = false;
 
         }
 
-        
     }
 }

@@ -45,9 +45,9 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
             this.pbAluno = new System.Windows.Forms.PictureBox();
             this.btnAddFoto = new System.Windows.Forms.Button();
-            this.btnPesquisar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).BeginInit();
             this.SuspendLayout();
@@ -112,6 +112,7 @@
             // 
             // tbNome
             // 
+            this.tbNome.Enabled = false;
             this.tbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbNome.Location = new System.Drawing.Point(115, 82);
             this.tbNome.Name = "tbNome";
@@ -120,6 +121,7 @@
             // 
             // tbEmail
             // 
+            this.tbEmail.Enabled = false;
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.Location = new System.Drawing.Point(115, 126);
             this.tbEmail.Name = "tbEmail";
@@ -128,6 +130,7 @@
             // 
             // mtbCpf
             // 
+            this.mtbCpf.Enabled = false;
             this.mtbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCpf.Location = new System.Drawing.Point(115, 170);
             this.mtbCpf.Mask = "###,###,###-##";
@@ -137,6 +140,7 @@
             // 
             // mtbTelefone
             // 
+            this.mtbTelefone.Enabled = false;
             this.mtbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTelefone.Location = new System.Drawing.Point(115, 214);
             this.mtbTelefone.Mask = "(##)#####-####";
@@ -153,7 +157,7 @@
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 268);
+            this.panel1.Location = new System.Drawing.Point(0, 287);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(724, 34);
             this.panel1.TabIndex = 22;
@@ -161,6 +165,7 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEditar.Enabled = false;
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
@@ -212,6 +217,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -229,6 +235,7 @@
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSalvar.Enabled = false;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
@@ -242,6 +249,23 @@
             this.btnSalvar.UseCompatibleTextRendering = true;
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
+            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPesquisar.Location = new System.Drawing.Point(273, 36);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(116, 30);
+            this.btnPesquisar.TabIndex = 23;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPesquisar.UseCompatibleTextRendering = true;
+            this.btnPesquisar.UseVisualStyleBackColor = false;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // pbAluno
             // 
@@ -268,28 +292,11 @@
             this.btnAddFoto.UseCompatibleTextRendering = true;
             this.btnAddFoto.UseVisualStyleBackColor = false;
             // 
-            // btnPesquisar
-            // 
-            this.btnPesquisar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(273, 36);
-            this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(116, 30);
-            this.btnPesquisar.TabIndex = 23;
-            this.btnPesquisar.Text = "Pesquisar";
-            this.btnPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPesquisar.UseCompatibleTextRendering = true;
-            this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
-            // 
             // StudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 302);
+            this.ClientSize = new System.Drawing.Size(724, 321);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbAluno);
@@ -305,11 +312,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(740, 390);
+            this.MaximumSize = new System.Drawing.Size(740, 360);
+            this.MinimizeBox = false;
             this.Name = "StudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Aluno";
-            this.Load += new System.EventHandler(this.StudentForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).EndInit();
             this.ResumeLayout(false);

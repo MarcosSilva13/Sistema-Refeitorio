@@ -15,6 +15,7 @@ namespace SistemaRefeitorio
     {
         StudentForm sf = new StudentForm();
         RefectoryForm rf = new RefectoryForm();
+        CreditForm cf = new CreditForm();
         public MainForm()
         {
             InitializeComponent();
@@ -38,6 +39,11 @@ namespace SistemaRefeitorio
         private void CafeDaManhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rf.ShowDialog();
+        }
+
+        private void CadastrarCreditoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cf.ShowDialog();
         }
     }
 }
