@@ -17,10 +17,6 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                /* string insert = "INSERT INTO students (raStudent, name, email, cpf, telephone) VALUES " +
-                     "('" + student.RaStudent + "', '" + student.Name + "', '" + student.Email + "', '" + student.Cpf + "', '" + student.Telephone + "');";
-                 */
-
                 string insert = "INSERT INTO students (raStudent, name, email, cpf, telephone) VALUES " +
                     "(@raStudent, @name, @email, @cpf, @telephone)";
 
@@ -33,8 +29,6 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@email", student.Email);
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@telephone", student.Telephone);
-
-                //cmd.ExecuteReader();
 
                 cmd.ExecuteNonQuery();
 
@@ -66,8 +60,6 @@ namespace SistemaRefeitorio.Model.SQL
                 
                 Connect();
 
-                //string sql = "SELECT raStudent, name, email, cpf, telephone FROM students WHERE raStudent = " + student.RaStudent;
-
                 string select = "SELECT raStudent, name, email, cpf, telephone FROM students WHERE raStudent = @raStudent";
 
                 MySqlCommand cmd = new MySqlCommand(select, SqlConnection);
@@ -94,11 +86,11 @@ namespace SistemaRefeitorio.Model.SQL
                     return null;
                 }
 
-                Student sf = new Student(raStudent, name, email, cpf, telephone);
+                Student studentF = new Student(raStudent, name, email, cpf, telephone);
 
                 reader.Close();
 
-                return sf;
+                return studentF;
                 
             }
             catch (Exception ex)

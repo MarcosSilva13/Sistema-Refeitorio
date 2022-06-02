@@ -13,9 +13,9 @@ namespace SistemaRefeitorio
 {
     public partial class MainForm : Form, IVerify
     {
-        StudentForm sf = new StudentForm();
-        RefectoryForm rf = new RefectoryForm();
-        CreditForm cf = new CreditForm();
+        StudentForm studentF = new StudentForm();
+        RefectoryForm refectoryF = new RefectoryForm();
+        CreditForm creditF = new CreditForm();
         public MainForm()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace SistemaRefeitorio
 
         private void CadastrarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sf.ShowDialog();
+            studentF.ShowDialog();
         }
 
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,13 +38,13 @@ namespace SistemaRefeitorio
 
         private void CafeDaManhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rf.Text = "Refeitório - Café da manhã";
-            rf.ShowDialog();
+            refectoryF.Text = "Refeitório - Café da manhã";
+            refectoryF.ShowDialog();
         }
 
         private void CadastrarCreditoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cf.ShowDialog();
+            creditF.ShowDialog();
         }
     }
 }

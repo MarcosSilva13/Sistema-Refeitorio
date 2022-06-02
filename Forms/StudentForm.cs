@@ -8,8 +8,8 @@ namespace SistemaRefeitorio.Forms
 {
     public partial class StudentForm : Form
     {
-        Student sf;
-        StudentSQL sfSQL;
+        Student studentF;
+        StudentSQL studentSQL;
 
         bool edit = false;
         public StudentForm()
@@ -17,7 +17,7 @@ namespace SistemaRefeitorio.Forms
             InitializeComponent();
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbRa.Text.Equals(String.Empty))
             {
@@ -25,32 +25,32 @@ namespace SistemaRefeitorio.Forms
                 return;
             }
 
-            sf = new Student(Convert.ToInt32(tbRa.Text));
+            studentF = new Student(Convert.ToInt32(tbRa.Text));
 
-            sfSQL = new StudentSQL();
+            studentSQL = new StudentSQL();
 
-            sf = sfSQL.GetData(sf);
+            studentF = studentSQL.GetData(studentF);
 
-            if(sf == null)
+            if(studentF == null)
             {
                 return;
             }
 
-            tbRa.Text = sf.RaStudent.ToString();
-            tbNome.Text = sf.Name;
-            tbEmail.Text = sf.Email;
-            mtbCpf.Text = sf.Cpf;
-            mtbTelefone.Text = sf.Telephone;
+            tbRa.Text = studentF.RaStudent.ToString();
+            tbNome.Text = studentF.Name;
+            tbEmail.Text = studentF.Email;
+            mtbCpf.Text = studentF.Cpf;
+            mtbTelefone.Text = studentF.Telephone;
 
             Search();
         }
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void BtnNovo_Click(object sender, EventArgs e)
         {
             New();
        
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
            /* if (tbRa.Text.Equals(String.Empty) || tbNome.Text.Equals(String.Empty) || tbEmail.Text.Equals(String.Empty) || mtbCpf.MaskCompleted)
             {
@@ -58,12 +58,12 @@ namespace SistemaRefeitorio.Forms
                 return;
             }*/
            
-            sf = new Student(Convert.ToInt32(tbRa.Text), tbNome.Text, tbEmail.Text, mtbCpf.Text, mtbTelefone.Text);
-            sfSQL = new StudentSQL();
+            studentF = new Student(Convert.ToInt32(tbRa.Text), tbNome.Text, tbEmail.Text, mtbCpf.Text, mtbTelefone.Text);
+            studentSQL = new StudentSQL();
 
             if (edit == false)
             {
-                 if (sfSQL.Insert(sf) == 1)
+                 if (studentSQL.Insert(studentF) == 1)
                  {
                      MessageBox.Show("Novo aluno inserido com sucesso!", "Confirmação");
                      Save();
@@ -75,7 +75,7 @@ namespace SistemaRefeitorio.Forms
             }
             else
             {
-                if(sfSQL.Update(sf) == 1)
+                if(studentSQL.Update(studentF) == 1)
                 {
                     MessageBox.Show("Dados do aluno atualizados com sucesso!", "Atualização");
                     Save();
@@ -87,19 +87,19 @@ namespace SistemaRefeitorio.Forms
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void BtnEditar_Click(object sender, EventArgs e)
         {
             edit = true;
             Edit();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             edit = false;
             Cancel();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
             this.Close();
 

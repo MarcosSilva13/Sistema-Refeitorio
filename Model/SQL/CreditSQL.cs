@@ -27,8 +27,6 @@ namespace SistemaRefeitorio.Model.SQL
 
                 Connect();
 
-                //string sql = "SELECT raStudent, name, email, cpf, telephone FROM students WHERE raStudent = " + student.RaStudent;
-
                 string select = "SELECT raStudent, name, email, cpf, coffeCredit, lunchCredit, dinnerCredit, telephone FROM students WHERE raStudent = @raStudent";
 
                 MySqlCommand cmd = new MySqlCommand(select, SqlConnection);
@@ -58,11 +56,11 @@ namespace SistemaRefeitorio.Model.SQL
                     return null;
                 }
 
-                Student sf = new Student(raStudent, name, email, cpf, telephone, coffeCredit, lunchCredit, dinnerCredit);
+                Student studentF = new Student(raStudent, name, email, cpf, telephone, coffeCredit, lunchCredit, dinnerCredit);
 
                 reader.Close();
 
-                return sf;
+                return studentF;
 
             }
             catch (Exception ex)

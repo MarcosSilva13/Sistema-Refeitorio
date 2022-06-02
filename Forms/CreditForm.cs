@@ -14,14 +14,14 @@ namespace SistemaRefeitorio.Forms
 {
     public partial class CreditForm : Form
     {
-        Student sf;
+        Student studentF;
         CreditSQL creditSQL;
         public CreditForm()
         {
             InitializeComponent();
         }
 
-        private void btnPesquisar_Click(object sender, EventArgs e)
+        private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbRa.Text.Equals(String.Empty))
             {
@@ -29,39 +29,39 @@ namespace SistemaRefeitorio.Forms
                 return;
             }
 
-            sf = new Student(Convert.ToInt32(tbRa.Text));
+            studentF = new Student(Convert.ToInt32(tbRa.Text));
             creditSQL = new CreditSQL();
 
-            sf = creditSQL.GetDataCredit(sf);
+            studentF = creditSQL.GetDataCredit(studentF);
 
-            if(sf == null)
+            if(studentF == null)
             {
                 return;
             }
 
-            tbRa.Text = sf.RaStudent.ToString();
-            tbNome.Text = sf.Name;
-            tbEmail.Text = sf.Email;
-            mtbCpf.Text = sf.Cpf;
-            mtbTelefone.Text = sf.Telephone;
-            tbCafe.Text = sf.CoffeCredit.ToString();
-            tbAlmoco.Text = sf.LunchCredit.ToString();
-            tbJanta.Text = sf.DinnerCredit.ToString();
+            tbRa.Text = studentF.RaStudent.ToString();
+            tbNome.Text = studentF.Name;
+            tbEmail.Text = studentF.Email;
+            mtbCpf.Text = studentF.Cpf;
+            mtbTelefone.Text = studentF.Telephone;
+            tbCafe.Text = studentF.CoffeCredit.ToString();
+            tbAlmoco.Text = studentF.LunchCredit.ToString();
+            tbJanta.Text = studentF.DinnerCredit.ToString();
 
             Search();
         }
 
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void BtnNovo_Click(object sender, EventArgs e)
         {
             New();
         }
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            sf = new Student(Convert.ToInt32(tbRa.Text), Convert.ToInt32(tbCafe.Text),
+            studentF = new Student(Convert.ToInt32(tbRa.Text), Convert.ToInt32(tbCafe.Text),
                         Convert.ToInt32(tbAlmoco.Text), Convert.ToInt32(tbJanta.Text));
             creditSQL = new CreditSQL();
 
-            if(creditSQL.UpdateCredit(sf) == 1)
+            if(creditSQL.UpdateCredit(studentF) == 1)
             {
                 MessageBox.Show("Crédito adicionado com sucesso!", "Aviso");
                 Save();
@@ -73,25 +73,23 @@ namespace SistemaRefeitorio.Forms
             
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void BtnEditar_Click(object sender, EventArgs e)
         {
             Edit();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void BtnCancelar_Click(object sender, EventArgs e)
         {
             Cancel();
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void BtnSair_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-
-
-         private void New()
-         {
+        private void New()
+        {
 
             tbRa.Text = String.Empty;
             tbNome.Text = String.Empty;
@@ -112,7 +110,7 @@ namespace SistemaRefeitorio.Forms
             btnPesquisar.Enabled = true;
 
 
-         }
+        }
 
         private void Cancel()
         {
@@ -169,7 +167,5 @@ namespace SistemaRefeitorio.Forms
             btnPesquisar.Enabled = false;
 
         }
-
-        
     }
 }
