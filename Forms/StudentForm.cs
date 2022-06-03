@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using SistemaRefeitorio.Model.Entities;
 using SistemaRefeitorio.Model.SQL;
+using System.IO;
 
 namespace SistemaRefeitorio.Forms
 {
@@ -12,6 +13,7 @@ namespace SistemaRefeitorio.Forms
         StudentSQL studentSQL;
 
         bool edit = false;
+        string foto = String.Empty;
         public StudentForm()
         {
             InitializeComponent();
@@ -41,6 +43,18 @@ namespace SistemaRefeitorio.Forms
             tbEmail.Text = studentF.Email;
             mtbCpf.Text = studentF.Cpf;
             mtbTelefone.Text = studentF.Telephone;
+            foto = studentF.PicturePath;
+
+            if (studentF.Picture == null)
+            {
+                pbAluno.Image = null;
+            }
+            else
+            {
+                MemoryStream mstream = new MemoryStream(studentF.Picture);
+                pbAluno.Image = System.Drawing.Image.FromStream(mstream);
+                
+            }
 
             Search();
         }
@@ -50,15 +64,37 @@ namespace SistemaRefeitorio.Forms
        
         }
 
+        private void BtnAddFoto_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|AllFiles(*.*)|*.*";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                foto = dialog.FileName.ToString();
+                pbAluno.ImageLocation = foto;
+            }
+        }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-           /* if (tbRa.Text.Equals(String.Empty) || tbNome.Text.Equals(String.Empty) || tbEmail.Text.Equals(String.Empty) || mtbCpf.MaskCompleted)
+            /* if (tbRa.Text.Equals(String.Empty) || tbNome.Text.Equals(String.Empty) || tbEmail.Text.Equals(String.Empty) || mtbCpf.MaskCompleted)
+             {
+                 MessageBox.Show("Algum campo está vazio ou incompleto!", "Aviso");
+                 return;
+             }*/
+            
+            byte[] imageByte = null;
+
+            if (!foto.Equals(""))
             {
-                MessageBox.Show("Algum campo está vazio ou incompleto!", "Aviso");
-                return;
-            }*/
+                FileStream fstream = new FileStream(foto, FileMode.Open, FileAccess.Read);
+
+                BinaryReader br = new BinaryReader(fstream);
+
+                imageByte = br.ReadBytes((int)fstream.Length);
+            }
            
-            studentF = new Student(Convert.ToInt32(tbRa.Text), tbNome.Text, tbEmail.Text, mtbCpf.Text, mtbTelefone.Text);
+            studentF = new Student(Convert.ToInt32(tbRa.Text), tbNome.Text, tbEmail.Text, mtbCpf.Text, mtbTelefone.Text, imageByte, foto);
             studentSQL = new StudentSQL();
 
             if (edit == false)
@@ -112,6 +148,7 @@ namespace SistemaRefeitorio.Forms
             tbEmail.Text = String.Empty;
             mtbCpf.Text = String.Empty;
             mtbTelefone.Text = String.Empty;
+            pbAluno.Image = null;
 
             tbRa.Enabled = true;
             tbRa.Focus();
@@ -197,5 +234,6 @@ namespace SistemaRefeitorio.Forms
 
         }
 
+       
     }
 }

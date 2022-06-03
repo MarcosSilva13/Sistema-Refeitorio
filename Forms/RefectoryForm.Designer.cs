@@ -33,13 +33,13 @@ namespace SistemaRefeitorio.Forms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAcesso = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblRelogio = new System.Windows.Forms.Label();
-            this.mtbCpfRef = new System.Windows.Forms.MaskedTextBox();
-            this.btnConfirmar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblNumCredito = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.mtbCpfRef = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -75,13 +75,25 @@ namespace SistemaRefeitorio.Forms
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Controls.Add(this.lblRelogio);
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(448, 12);
+            this.groupBox2.Location = new System.Drawing.Point(447, 25);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(263, 100);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Relógio";
+            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox2_Paint);
+            // 
+            // lblRelogio
+            // 
+            this.lblRelogio.AutoSize = true;
+            this.lblRelogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelogio.Location = new System.Drawing.Point(83, 39);
+            this.lblRelogio.Name = "lblRelogio";
+            this.lblRelogio.Size = new System.Drawing.Size(128, 31);
+            this.lblRelogio.TabIndex = 0;
+            this.lblRelogio.Text = "00:00:00";
             // 
             // groupBox3
             // 
@@ -95,26 +107,25 @@ namespace SistemaRefeitorio.Forms
             this.groupBox3.Size = new System.Drawing.Size(262, 111);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "Dados";
             // 
-            // lblRelogio
+            // lblNumCredito
             // 
-            this.lblRelogio.AutoSize = true;
-            this.lblRelogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRelogio.Location = new System.Drawing.Point(83, 39);
-            this.lblRelogio.Name = "lblRelogio";
-            this.lblRelogio.Size = new System.Drawing.Size(128, 31);
-            this.lblRelogio.TabIndex = 0;
-            this.lblRelogio.Text = "00:00:00";
+            this.lblNumCredito.AutoSize = true;
+            this.lblNumCredito.Location = new System.Drawing.Point(117, 37);
+            this.lblNumCredito.Name = "lblNumCredito";
+            this.lblNumCredito.Size = new System.Drawing.Size(19, 20);
+            this.lblNumCredito.TabIndex = 14;
+            this.lblNumCredito.Text = "0";
             // 
-            // mtbCpfRef
+            // label2
             // 
-            this.mtbCpfRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCpfRef.Location = new System.Drawing.Point(6, 73);
-            this.mtbCpfRef.Mask = "###,###,###-##";
-            this.mtbCpfRef.Name = "mtbCpfRef";
-            this.mtbCpfRef.Size = new System.Drawing.Size(122, 26);
-            this.mtbCpfRef.TabIndex = 11;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Nº Créditos:";
             // 
             // btnConfirmar
             // 
@@ -126,6 +137,15 @@ namespace SistemaRefeitorio.Forms
             this.btnConfirmar.Text = "button1";
             this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
+            // mtbCpfRef
+            // 
+            this.mtbCpfRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCpfRef.Location = new System.Drawing.Point(6, 73);
+            this.mtbCpfRef.Mask = "###,###,###-##";
+            this.mtbCpfRef.Name = "mtbCpfRef";
+            this.mtbCpfRef.Size = new System.Drawing.Size(122, 26);
+            this.mtbCpfRef.TabIndex = 11;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -135,24 +155,6 @@ namespace SistemaRefeitorio.Forms
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Nº Créditos:";
-            // 
-            // lblNumCredito
-            // 
-            this.lblNumCredito.AutoSize = true;
-            this.lblNumCredito.Location = new System.Drawing.Point(117, 37);
-            this.lblNumCredito.Name = "lblNumCredito";
-            this.lblNumCredito.Size = new System.Drawing.Size(19, 20);
-            this.lblNumCredito.TabIndex = 14;
-            this.lblNumCredito.Text = "0";
             // 
             // timer1
             // 

@@ -270,9 +270,9 @@
             // pbAluno
             // 
             this.pbAluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAluno.Location = new System.Drawing.Point(518, 38);
+            this.pbAluno.Location = new System.Drawing.Point(503, 36);
             this.pbAluno.Name = "pbAluno";
-            this.pbAluno.Size = new System.Drawing.Size(144, 160);
+            this.pbAluno.Size = new System.Drawing.Size(176, 168);
             this.pbAluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAluno.TabIndex = 19;
             this.pbAluno.TabStop = false;
@@ -284,13 +284,14 @@
             this.btnAddFoto.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAddFoto.Image = global::SistemaRefeitorio.Properties.Resources.icons8_adicionar_imagem_ios_glyph_16;
             this.btnAddFoto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddFoto.Location = new System.Drawing.Point(518, 204);
+            this.btnAddFoto.Location = new System.Drawing.Point(518, 210);
             this.btnAddFoto.Name = "btnAddFoto";
             this.btnAddFoto.Size = new System.Drawing.Size(144, 30);
             this.btnAddFoto.TabIndex = 18;
             this.btnAddFoto.Text = "Add Foto";
             this.btnAddFoto.UseCompatibleTextRendering = true;
             this.btnAddFoto.UseVisualStyleBackColor = false;
+            this.btnAddFoto.Click += new System.EventHandler(this.BtnAddFoto_Click);
             // 
             // StudentForm
             // 

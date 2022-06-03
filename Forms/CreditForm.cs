@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,17 @@ namespace SistemaRefeitorio.Forms
             tbCafe.Text = studentF.CoffeCredit.ToString();
             tbAlmoco.Text = studentF.LunchCredit.ToString();
             tbJanta.Text = studentF.DinnerCredit.ToString();
+
+            if (studentF.Picture == null)
+            {
+                pbAluno.Image = null;
+            }
+            else
+            {
+                MemoryStream mstream = new MemoryStream(studentF.Picture);
+                pbAluno.Image = System.Drawing.Image.FromStream(mstream);
+
+            }
 
             Search();
         }
@@ -99,6 +111,7 @@ namespace SistemaRefeitorio.Forms
             tbCafe.Text = String.Empty;
             tbAlmoco.Text = String.Empty;
             tbJanta.Text = String.Empty;
+            pbAluno.Image = null;
 
             tbRa.Enabled = true;
             tbRa.Focus();

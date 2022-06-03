@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SistemaRefeitorio.Model.Entities;
 using System.Windows.Forms;
+using System.IO;
 
 namespace SistemaRefeitorio.Model.SQL
 {
@@ -17,8 +18,8 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string insert = "INSERT INTO students (raStudent, name, email, cpf, telephone) VALUES " +
-                    "(@raStudent, @name, @email, @cpf, @telephone)";
+                string insert = "INSERT INTO students (raStudent, name, email, cpf, telephone, picture, picturePath) VALUES " +
+                    "(@raStudent, @name, @email, @cpf, @telephone, @picture, @picturePath)";
 
                 MySqlCommand cmd = new MySqlCommand(insert, SqlConnection);
 
@@ -29,6 +30,8 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@email", student.Email);
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@telephone", student.Telephone);
+                cmd.Parameters.AddWithValue("@picture", student.Picture);
+                cmd.Parameters.AddWithValue("@picturePath", student.PicturePath);
 
                 cmd.ExecuteNonQuery();
 
@@ -54,13 +57,15 @@ namespace SistemaRefeitorio.Model.SQL
             string email = "";
             string cpf = "";
             string telephone = "";
-
+            byte[] picture = null;
+            string picturePath = "";
+            
             try
             {
                 
                 Connect();
 
-                string select = "SELECT raStudent, name, email, cpf, telephone FROM students WHERE raStudent = @raStudent";
+                string select = "SELECT raStudent, name, email, cpf, telephone, picture, picturePath, OCTET_LENGTH(picture) FROM students WHERE raStudent = @raStudent";
 
                 MySqlCommand cmd = new MySqlCommand(select, SqlConnection);
 
@@ -77,7 +82,14 @@ namespace SistemaRefeitorio.Model.SQL
                     email = reader.GetString(2);
                     cpf = reader.GetString(3);
                     telephone = reader.IsDBNull(4) ? String.Empty : reader.GetString(4);
-                    
+                    picturePath = reader.IsDBNull(6) ? String.Empty : reader.GetString(6);
+                    if(reader.IsDBNull(7) == false)
+                    {
+                        int sizeImage = reader.GetInt32(7);
+                        picture = new byte[sizeImage];
+                        reader.GetBytes(5, 0, picture, 0, sizeImage);
+                    }
+                   
                 }
 
                 if(raStudent == 0)
@@ -86,7 +98,7 @@ namespace SistemaRefeitorio.Model.SQL
                     return null;
                 }
 
-                Student studentF = new Student(raStudent, name, email, cpf, telephone);
+                Student studentF = new Student(raStudent, name, email, cpf, telephone, picture, picturePath);
 
                 reader.Close();
 
@@ -110,7 +122,7 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string update = "UPDATE students SET name = @name, email = @email, cpf = @cpf, telephone = @telephone " +
+                string update = "UPDATE students SET name = @name, email = @email, cpf = @cpf, telephone = @telephone, picture = @picture, picturePath = @picturePath " +
                     "WHERE raStudent = @raStudent;";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
@@ -122,6 +134,8 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@email", student.Email);
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@telephone", student.Telephone);
+                cmd.Parameters.AddWithValue("@picture", student.Picture);
+                cmd.Parameters.AddWithValue("@picturePath", student.PicturePath);
 
                 cmd.ExecuteNonQuery();
 
