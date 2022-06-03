@@ -130,7 +130,7 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string update = "UPDATE students SET lunchCredit = @lunchCredit" +
+                string update = "UPDATE students SET lunchCredit = @lunchCredit " +
                                 "WHERE raStudent = @raStudent OR cpf = @cpf";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
