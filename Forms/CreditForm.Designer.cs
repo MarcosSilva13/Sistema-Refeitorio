@@ -78,9 +78,9 @@ namespace SistemaRefeitorio.Forms
             // pbAluno
             // 
             this.pbAluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAluno.Location = new System.Drawing.Point(540, 24);
+            this.pbAluno.Location = new System.Drawing.Point(506, 24);
             this.pbAluno.Name = "pbAluno";
-            this.pbAluno.Size = new System.Drawing.Size(144, 160);
+            this.pbAluno.Size = new System.Drawing.Size(176, 168);
             this.pbAluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAluno.TabIndex = 35;
             this.pbAluno.TabStop = false;
@@ -377,6 +377,7 @@ namespace SistemaRefeitorio.Forms
             this.Name = "CreditForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Crédito";
+            this.Load += new System.EventHandler(this.CreditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

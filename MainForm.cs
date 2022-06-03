@@ -24,7 +24,10 @@ namespace SistemaRefeitorio
         {
             studentF.ShowDialog();
         }
-
+        private void CadastrarCreditoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            creditF.ShowDialog();
+        }
         private void SairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -47,9 +50,6 @@ namespace SistemaRefeitorio
             refectoryF.Text = "Jantar";
             refectoryF.ShowDialog();
         }
-        private void CadastrarCreditoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            creditF.ShowDialog();
-        }
+        
     }
 }

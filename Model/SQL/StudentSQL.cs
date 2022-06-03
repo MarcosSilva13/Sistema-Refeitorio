@@ -18,8 +18,9 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string insert = "INSERT INTO students (raStudent, name, email, cpf, telephone, picture, picturePath) VALUES " +
-                    "(@raStudent, @name, @email, @cpf, @telephone, @picture, @picturePath)";
+                string insert = "INSERT INTO students (raStudent, name, email, cpf, telephone, picture, " +
+                                "picturePath) VALUES " +
+                                "(@raStudent, @name, @email, @cpf, @telephone, @picture, @picturePath)";
 
                 MySqlCommand cmd = new MySqlCommand(insert, SqlConnection);
 
@@ -65,7 +66,8 @@ namespace SistemaRefeitorio.Model.SQL
                 
                 Connect();
 
-                string select = "SELECT raStudent, name, email, cpf, telephone, picture, picturePath, OCTET_LENGTH(picture) FROM students WHERE raStudent = @raStudent";
+                string select = "SELECT raStudent, name, email, cpf, telephone, picture, picturePath, " +
+                                "OCTET_LENGTH(picture) FROM students WHERE raStudent = @raStudent";
 
                 MySqlCommand cmd = new MySqlCommand(select, SqlConnection);
 
@@ -122,8 +124,9 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string update = "UPDATE students SET name = @name, email = @email, cpf = @cpf, telephone = @telephone, picture = @picture, picturePath = @picturePath " +
-                    "WHERE raStudent = @raStudent;";
+                string update = "UPDATE students SET name = @name, email = @email, cpf = @cpf," +
+                                "telephone = @telephone, picture = @picture, picturePath = @picturePath " +
+                                "WHERE raStudent = @raStudent;";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
 

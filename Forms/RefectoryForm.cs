@@ -98,7 +98,7 @@ namespace SistemaRefeitorio.Forms
                 lblAcesso.Text = studentF.Name + " - Acesso negado!";
                 mtbCpfRef.Text = String.Empty;
                 mtbCpfRef.Focus();
-                MessageBox.Show("O aluno não tem mais créditos!", "Aviso");
+                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso");
             }
         }
 
@@ -120,7 +120,7 @@ namespace SistemaRefeitorio.Forms
                 mtbCpfRef.Text = String.Empty;
                 mtbCpfRef.Focus();
 
-                MessageBox.Show("O aluno não tem mais créditos!", "Aviso");
+                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso");
             }
             
         }
@@ -143,7 +143,7 @@ namespace SistemaRefeitorio.Forms
                 mtbCpfRef.Text = String.Empty;
                 mtbCpfRef.Focus();
 
-                MessageBox.Show("O aluno não tem mais créditos!", "Aviso");
+                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso");
             }
 
         }

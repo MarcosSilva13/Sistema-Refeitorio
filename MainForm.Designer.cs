@@ -76,8 +76,8 @@
             // CadastrarCreditoToolStripMenuItem
             // 
             this.CadastrarCreditoToolStripMenuItem.Name = "CadastrarCreditoToolStripMenuItem";
-            this.CadastrarCreditoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.CadastrarCreditoToolStripMenuItem.Text = "Cadastrar Crédito";
+            this.CadastrarCreditoToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
+            this.CadastrarCreditoToolStripMenuItem.Text = "Cadastrar Crédito/Consulta";
             this.CadastrarCreditoToolStripMenuItem.Click += new System.EventHandler(this.CadastrarCreditoToolStripMenuItem_Click);
             // 
             // SairToolStripMenuItem

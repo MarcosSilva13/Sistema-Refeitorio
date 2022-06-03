@@ -26,7 +26,7 @@ namespace SistemaRefeitorio.Model.SQL
                 Connect();
 
                 string select = "SELECT raStudent, name, cpf, picture, OCTET_LENGTH(picture)," +
-                              " coffeCredit, lunchCredit, dinnerCredit FROM students WHERE cpf = @cpf";
+                                "coffeCredit, lunchCredit, dinnerCredit FROM students WHERE cpf = @cpf";
 
                 MySqlCommand cmd = new MySqlCommand(select, SqlConnection);
 
@@ -92,7 +92,8 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string update = "UPDATE students SET coffeCredit = @coffeCredit WHERE raStudent = @raStudent OR cpf = @cpf";
+                string update = "UPDATE students SET coffeCredit = @coffeCredit " +
+                                "WHERE raStudent = @raStudent OR cpf = @cpf";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
 
@@ -129,7 +130,8 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string update = "UPDATE students SET lunchCredit = @lunchCredit WHERE raStudent = @raStudent OR cpf = @cpf";
+                string update = "UPDATE students SET lunchCredit = @lunchCredit" +
+                                "WHERE raStudent = @raStudent OR cpf = @cpf";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
 
@@ -166,7 +168,8 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string update = "UPDATE students SET dinnerCredit = @dinnerCredit WHERE raStudent = @raStudent OR cpf = @cpf";
+                string update = "UPDATE students SET dinnerCredit = @dinnerCredit " +
+                                "WHERE raStudent = @raStudent OR cpf = @cpf";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
 

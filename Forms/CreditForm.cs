@@ -180,5 +180,36 @@ namespace SistemaRefeitorio.Forms
             btnPesquisar.Enabled = false;
 
         }
+
+        private void CreditForm_Load(object sender, EventArgs e)
+        {
+            
+            tbRa.Text = String.Empty;
+            tbNome.Text = String.Empty;
+            tbEmail.Text = String.Empty;
+            mtbCpf.Text = String.Empty;
+            mtbTelefone.Text = String.Empty;
+            tbCafe.Text = String.Empty;
+            tbAlmoco.Text = String.Empty;
+            tbJanta.Text = String.Empty;
+            pbAluno.Image = null;
+
+            tbRa.Enabled = true;
+            tbNome.Enabled = false;
+            tbEmail.Enabled = false;
+            mtbCpf.Enabled = false;
+            mtbTelefone.Enabled = false;
+            tbCafe.Enabled = false;
+            tbAlmoco.Enabled = false;
+            tbJanta.Enabled = false;
+
+            btnNovo.Enabled = true;
+            btnSalvar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnPesquisar.Enabled = true;
+
+            tbRa.Focus();
+        }
     }
 }

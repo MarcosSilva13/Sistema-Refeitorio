@@ -318,6 +318,7 @@
             this.Name = "StudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Aluno";
+            this.Load += new System.EventHandler(this.StudentForm_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).EndInit();
             this.ResumeLayout(false);

@@ -22,15 +22,15 @@ namespace SistemaRefeitorio.Model.SQL
             int dinnerCredit = 0;
             string telephone = "";
             byte[] picture = null;
-            //string picturePath = "";
 
             try
             {
 
                 Connect();
 
-                string select = "SELECT raStudent, name, email, cpf, coffeCredit, lunchCredit, dinnerCredit, telephone, picture, OCTET_LENGTH(picture)" +
-                                " FROM students WHERE raStudent = @raStudent";
+                string select = "SELECT raStudent, name, email, cpf, coffeCredit, lunchCredit, " +
+                                "dinnerCredit, telephone, picture, OCTET_LENGTH(picture)" +
+                                "FROM students WHERE raStudent = @raStudent";
 
                 MySqlCommand cmd = new MySqlCommand(select, SqlConnection);
 
@@ -64,7 +64,15 @@ namespace SistemaRefeitorio.Model.SQL
                     return null;
                 }
 
-                Student studentF = new Student(raStudent, name, email, cpf, telephone, coffeCredit, lunchCredit, dinnerCredit, picture);
+                Student studentF = new Student(raStudent,
+                                               name,
+                                               email,
+                                               cpf,
+                                               telephone,
+                                               coffeCredit,
+                                               lunchCredit,
+                                               dinnerCredit,
+                                               picture);
 
                 reader.Close();
 
@@ -89,8 +97,8 @@ namespace SistemaRefeitorio.Model.SQL
             {
                 Connect();
 
-                string update = "UPDATE students SET coffeCredit = @coffeCredit, lunchCredit = @lunchCredit, dinnerCredit = @dinnerCredit " +
-                    "WHERE raStudent = @raStudent;";
+                string update = "UPDATE students SET coffeCredit = @coffeCredit, lunchCredit = @lunchCredit," +
+                                "dinnerCredit = @dinnerCredit WHERE raStudent = @raStudent;";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
 

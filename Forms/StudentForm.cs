@@ -137,8 +137,8 @@ namespace SistemaRefeitorio.Forms
 
         private void BtnSair_Click(object sender, EventArgs e)
         {
+            edit = false;
             this.Close();
-
         }
 
         private void New()
@@ -217,6 +217,7 @@ namespace SistemaRefeitorio.Forms
             
         }
 
+
         private void Search()
         {
             tbRa.Enabled = false;
@@ -234,6 +235,29 @@ namespace SistemaRefeitorio.Forms
 
         }
 
-       
+        private void StudentForm_Load(object sender, EventArgs e)
+        {
+            tbRa.Focus();
+            tbRa.Text = String.Empty;
+            tbNome.Text = String.Empty;
+            tbEmail.Text = String.Empty;
+            mtbCpf.Text = String.Empty;
+            mtbTelefone.Text = String.Empty;
+            pbAluno.Image = null;
+
+            tbRa.Enabled = true;
+            tbNome.Enabled = false;
+            tbEmail.Enabled = false;
+            mtbCpf.Enabled = false;
+            mtbTelefone.Enabled = false;
+
+            btnNovo.Enabled = true;
+            btnPesquisar.Enabled = true;
+            btnSalvar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnAddFoto.Enabled = false;
+
+        }
     }
 }
