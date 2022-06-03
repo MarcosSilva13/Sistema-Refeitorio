@@ -87,7 +87,6 @@
     <Compile Include="Forms\StudentForm.Designer.cs">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\IVerify.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +96,7 @@
     <Compile Include="Model\Connection.cs" />
     <Compile Include="Model\Entities\Student.cs" />
     <Compile Include="Model\SQL\CreditSQL.cs" />
+    <Compile Include="Model\SQL\RefectorySQL.cs" />
     <Compile Include="Model\SQL\StudentSQL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

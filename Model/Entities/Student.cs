@@ -14,7 +14,19 @@ namespace SistemaRefeitorio.Model.Entities
         public string Email { get; set; }        public string Cpf { get; set; }        public string Telephone { get; set; }        public int CoffeCredit { get; set; }        public int LunchCredit { get; set; }        public int DinnerCredit { get; set; }        public byte[] Picture { get; set; }        public string PicturePath { get; set; }        public Student(){ }        public Student(int raStudent)
         {
             RaStudent = raStudent;
-        }        public Student(int raStudent, int coffeCredit, int lunchCredit, int dinnerCredit)
+        }        public Student(string cpf)
+        {
+            Cpf = cpf;
+        }        public Student(int raStudent, string name, string cpf, byte[] picture, int coffeCredit, int lunchCredit, int dinnerCredit)
+        {
+            RaStudent = raStudent;
+            Name = name;
+            Cpf = cpf;
+            Picture = picture;
+            CoffeCredit = coffeCredit;
+            LunchCredit = lunchCredit;
+            DinnerCredit = dinnerCredit;
+        }        public Student(int raStudent, int coffeCredit, int lunchCredit, int dinnerCredit)
         {
             RaStudent = raStudent;
             CoffeCredit = coffeCredit;

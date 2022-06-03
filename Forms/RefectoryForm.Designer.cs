@@ -39,12 +39,12 @@ namespace SistemaRefeitorio.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.mtbCpfRef = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbAluno = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -63,13 +63,13 @@ namespace SistemaRefeitorio.Forms
             // lblAcesso
             // 
             this.lblAcesso.AutoSize = true;
-            this.lblAcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAcesso.Location = new System.Drawing.Point(32, 33);
+            this.lblAcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcesso.Location = new System.Drawing.Point(12, 32);
             this.lblAcesso.Name = "lblAcesso";
-            this.lblAcesso.Size = new System.Drawing.Size(174, 29);
+            this.lblAcesso.Size = new System.Drawing.Size(188, 29);
             this.lblAcesso.TabIndex = 0;
             this.lblAcesso.Text = "Resultado aqui";
-            this.lblAcesso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblAcesso.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox2
             // 
@@ -89,7 +89,7 @@ namespace SistemaRefeitorio.Forms
             // 
             this.lblRelogio.AutoSize = true;
             this.lblRelogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRelogio.Location = new System.Drawing.Point(83, 39);
+            this.lblRelogio.Location = new System.Drawing.Point(67, 35);
             this.lblRelogio.Name = "lblRelogio";
             this.lblRelogio.Size = new System.Drawing.Size(128, 31);
             this.lblRelogio.TabIndex = 0;
@@ -112,7 +112,7 @@ namespace SistemaRefeitorio.Forms
             // lblNumCredito
             // 
             this.lblNumCredito.AutoSize = true;
-            this.lblNumCredito.Location = new System.Drawing.Point(117, 37);
+            this.lblNumCredito.Location = new System.Drawing.Point(136, 34);
             this.lblNumCredito.Name = "lblNumCredito";
             this.lblNumCredito.Size = new System.Drawing.Size(19, 20);
             this.lblNumCredito.TabIndex = 14;
@@ -121,7 +121,7 @@ namespace SistemaRefeitorio.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 37);
+            this.label2.Location = new System.Drawing.Point(25, 34);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 13;
@@ -130,31 +130,33 @@ namespace SistemaRefeitorio.Forms
             // btnConfirmar
             // 
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Location = new System.Drawing.Point(134, 73);
+            this.btnConfirmar.Location = new System.Drawing.Point(157, 73);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(77, 26);
             this.btnConfirmar.TabIndex = 12;
             this.btnConfirmar.Text = "button1";
             this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
             // mtbCpfRef
             // 
             this.mtbCpfRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCpfRef.Location = new System.Drawing.Point(6, 73);
+            this.mtbCpfRef.Location = new System.Drawing.Point(29, 73);
             this.mtbCpfRef.Mask = "###,###,###-##";
             this.mtbCpfRef.Name = "mtbCpfRef";
             this.mtbCpfRef.Size = new System.Drawing.Size(122, 26);
             this.mtbCpfRef.TabIndex = 11;
+            this.mtbCpfRef.TextChanged += new System.EventHandler(this.MtbCpfRef_TextChanged);
             // 
-            // pictureBox1
+            // pbAluno
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(240, 210);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pbAluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbAluno.Location = new System.Drawing.Point(77, 12);
+            this.pbAluno.Name = "pbAluno";
+            this.pbAluno.Size = new System.Drawing.Size(240, 210);
+            this.pbAluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAluno.TabIndex = 3;
+            this.pbAluno.TabStop = false;
             // 
             // timer1
             // 
@@ -167,7 +169,7 @@ namespace SistemaRefeitorio.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(724, 411);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbAluno);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -178,13 +180,14 @@ namespace SistemaRefeitorio.Forms
             this.Name = "RefectoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Refeitório";
+            this.Load += new System.EventHandler(this.RefectoryForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,7 +201,7 @@ namespace SistemaRefeitorio.Forms
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnConfirmar;
         private System.Windows.Forms.MaskedTextBox mtbCpfRef;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbAluno;
         private System.Windows.Forms.Label lblNumCredito;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
