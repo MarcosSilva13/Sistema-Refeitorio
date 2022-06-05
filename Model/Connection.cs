@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace SistemaRefeitorio.Model
 {
-    public class Connection
+    public abstract class Connection
     {
         protected MySqlConnection SqlConnection { get; private set; }
         private const string CONNECTION_STRING = "DATABASE=refeitorio; port=3306; SERVER=localhost; username=root; password=Kurorotepshi_13";

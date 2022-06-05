@@ -17,7 +17,7 @@ namespace SistemaRefeitorio.Forms
         Student studentF;
         RefectorySQL refSQL;
         
-        string status = "";
+        string status = String.Empty;
         public RefectoryForm()
         {
             InitializeComponent();
@@ -38,7 +38,6 @@ namespace SistemaRefeitorio.Forms
 
             status = this.Text;
             
-            MessageBox.Show(status);
         }
         private void BtnConfirmar_Click(object sender, EventArgs e)
         {
@@ -98,7 +97,7 @@ namespace SistemaRefeitorio.Forms
                 lblAcesso.Text = studentF.Name + " - Acesso negado!";
                 mtbCpfRef.Text = String.Empty;
                 mtbCpfRef.Focus();
-                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso");
+                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -120,7 +119,7 @@ namespace SistemaRefeitorio.Forms
                 mtbCpfRef.Text = String.Empty;
                 mtbCpfRef.Focus();
 
-                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso");
+                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
@@ -143,7 +142,7 @@ namespace SistemaRefeitorio.Forms
                 mtbCpfRef.Text = String.Empty;
                 mtbCpfRef.Focus();
 
-                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso");
+                MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -151,7 +150,7 @@ namespace SistemaRefeitorio.Forms
         private void groupBox2_Paint(object sender, PaintEventArgs p)
         {
             //ControlPaint.DrawBorder(p.Graphics, this.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-            //ControlPaint.DrawBorder3D(p.Graphics, this.ClientRectangle, Border3DStyle.SunkenInner);
+            //ControlPaint.DrawBorder(p.Graphics, this.ClientRectangle, BorderStyle.FixedSingle);
             /*GroupBox box = (GroupBox)sender;
             p.Graphics.Clear(SystemColors.ControlDark);
             p.Graphics.DrawString(box.Text, box.Font, Brushes.Black, 0, 0);

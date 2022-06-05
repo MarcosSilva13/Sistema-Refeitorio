@@ -16,22 +16,52 @@ namespace SistemaRefeitorio.Forms
     public partial class CreditForm : Form
     {
         Student studentF;
-        CreditSQL creditSQL;
+        CreditSQL creditSQL = new CreditSQL();
         public CreditForm()
         {
             InitializeComponent();
+        }
+
+        private void CreditForm_Load(object sender, EventArgs e)
+        {
+            tbRa.Text = String.Empty;
+            tbNome.Text = String.Empty;
+            tbEmail.Text = String.Empty;
+            mtbCpf.Text = String.Empty;
+            mtbTelefone.Text = String.Empty;
+            tbCafe.Text = String.Empty;
+            tbAlmoco.Text = String.Empty;
+            tbJanta.Text = String.Empty;
+            pbAluno.Image = null;
+
+            tbRa.Enabled = true;
+            tbNome.Enabled = false;
+            tbEmail.Enabled = false;
+            mtbCpf.Enabled = false;
+            mtbTelefone.Enabled = false;
+            tbCafe.Enabled = false;
+            tbAlmoco.Enabled = false;
+            tbJanta.Enabled = false;
+
+            btnNovo.Enabled = true;
+            btnSalvar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnPesquisar.Enabled = true;
+
+            tbRa.Focus();
         }
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbRa.Text.Equals(String.Empty))
             {
-                MessageBox.Show("O Campo \"RA\" está vazio!", "Aviso");
+                MessageBox.Show("O Campo \"RA\" está vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             studentF = new Student(Convert.ToInt32(tbRa.Text));
-            creditSQL = new CreditSQL();
+           
 
             studentF = creditSQL.GetDataCredit(studentF);
 
@@ -71,16 +101,15 @@ namespace SistemaRefeitorio.Forms
         {
             studentF = new Student(Convert.ToInt32(tbRa.Text), Convert.ToInt32(tbCafe.Text),
                         Convert.ToInt32(tbAlmoco.Text), Convert.ToInt32(tbJanta.Text));
-            creditSQL = new CreditSQL();
 
             if(creditSQL.UpdateCredit(studentF) == 1)
             {
-                MessageBox.Show("Crédito adicionado com sucesso!", "Aviso");
+                MessageBox.Show("Crédito adicionado com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Save();
             }
             else
             {
-                MessageBox.Show("Ocorreu um erro!", "Erro");
+                MessageBox.Show("Ocorreu um erro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }
@@ -102,7 +131,6 @@ namespace SistemaRefeitorio.Forms
 
         private void New()
         {
-
             tbRa.Text = String.Empty;
             tbNome.Text = String.Empty;
             tbEmail.Text = String.Empty;
@@ -179,37 +207,6 @@ namespace SistemaRefeitorio.Forms
             btnSalvar.Enabled = false;
             btnPesquisar.Enabled = false;
 
-        }
-
-        private void CreditForm_Load(object sender, EventArgs e)
-        {
-            
-            tbRa.Text = String.Empty;
-            tbNome.Text = String.Empty;
-            tbEmail.Text = String.Empty;
-            mtbCpf.Text = String.Empty;
-            mtbTelefone.Text = String.Empty;
-            tbCafe.Text = String.Empty;
-            tbAlmoco.Text = String.Empty;
-            tbJanta.Text = String.Empty;
-            pbAluno.Image = null;
-
-            tbRa.Enabled = true;
-            tbNome.Enabled = false;
-            tbEmail.Enabled = false;
-            mtbCpf.Enabled = false;
-            mtbTelefone.Enabled = false;
-            tbCafe.Enabled = false;
-            tbAlmoco.Enabled = false;
-            tbJanta.Enabled = false;
-
-            btnNovo.Enabled = true;
-            btnSalvar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnCancelar.Enabled = false;
-            btnPesquisar.Enabled = true;
-
-            tbRa.Focus();
         }
     }
 }

@@ -50,6 +50,10 @@ namespace SistemaRefeitorio
             refectoryF.Text = "Jantar";
             refectoryF.ShowDialog();
         }
-        
+
+        private void SobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Sistema Refeitório\nCopyright © All Right Reserved. Marcos Antônio", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }

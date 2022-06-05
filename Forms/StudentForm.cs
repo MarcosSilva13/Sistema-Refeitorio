@@ -1,5 +1,4 @@
-﻿using MySqlConnector;
-using System;
+﻿using System;
 using System.Windows.Forms;
 using SistemaRefeitorio.Model.Entities;
 using SistemaRefeitorio.Model.SQL;
@@ -10,26 +9,49 @@ namespace SistemaRefeitorio.Forms
     public partial class StudentForm : Form
     {
         Student studentF;
-        StudentSQL studentSQL;
+        StudentSQL studentSQL = new StudentSQL();
 
-        bool edit = false;
+        bool editing = false;
         string foto = String.Empty;
         public StudentForm()
         {
             InitializeComponent();
         }
 
+        private void StudentForm_Load(object sender, EventArgs e)
+        {
+            tbRa.Focus();
+            tbRa.Text = String.Empty;
+            tbNome.Text = String.Empty;
+            tbEmail.Text = String.Empty;
+            mtbCpf.Text = String.Empty;
+            mtbTelefone.Text = String.Empty;
+            pbAluno.Image = null;
+
+            tbRa.Enabled = true;
+            tbNome.Enabled = false;
+            tbEmail.Enabled = false;
+            mtbCpf.Enabled = false;
+            mtbTelefone.Enabled = false;
+
+            btnNovo.Enabled = true;
+            btnPesquisar.Enabled = true;
+            btnSalvar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnCancelar.Enabled = false;
+            btnAddFoto.Enabled = false;
+
+        }
+
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
             if (tbRa.Text.Equals(String.Empty))
             {
-                MessageBox.Show("O Campo \"RA\" está vazio!", "Aviso");
+                MessageBox.Show("O Campo \"RA\" está vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             studentF = new Student(Convert.ToInt32(tbRa.Text));
-
-            studentSQL = new StudentSQL();
 
             studentF = studentSQL.GetData(studentF);
 
@@ -60,6 +82,7 @@ namespace SistemaRefeitorio.Forms
         }
         private void BtnNovo_Click(object sender, EventArgs e)
         {
+            //New();
             New();
        
         }
@@ -95,49 +118,48 @@ namespace SistemaRefeitorio.Forms
             }
            
             studentF = new Student(Convert.ToInt32(tbRa.Text), tbNome.Text, tbEmail.Text, mtbCpf.Text, mtbTelefone.Text, imageByte, foto);
-            studentSQL = new StudentSQL();
 
-            if (edit == false)
+            if (editing == false)
             {
                  if (studentSQL.Insert(studentF) == 1)
                  {
-                     MessageBox.Show("Novo aluno inserido com sucesso!", "Confirmação");
+                     MessageBox.Show("Novo aluno inserido com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                      Save();
                  }
                  else
                  {
-                    MessageBox.Show("Ocorreu um erro!", "Aviso");
+                    MessageBox.Show("Ocorreu um erro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                  }
             }
             else
             {
                 if(studentSQL.Update(studentF) == 1)
                 {
-                    MessageBox.Show("Dados do aluno atualizados com sucesso!", "Atualização");
+                    MessageBox.Show("Dados do aluno atualizados com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Save();
                 }
                 else
                 {
-                    MessageBox.Show("Ocorreu um erro!", "Aviso");
+                    MessageBox.Show("Ocorreu um erro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            edit = true;
+            editing = true;
             Edit();
         }
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
-            edit = false;
+            editing = false;
             Cancel();
         }
 
         private void BtnSair_Click(object sender, EventArgs e)
         {
-            edit = false;
+            editing = false;
             this.Close();
         }
 
@@ -217,7 +239,6 @@ namespace SistemaRefeitorio.Forms
             
         }
 
-
         private void Search()
         {
             tbRa.Enabled = false;
@@ -232,31 +253,6 @@ namespace SistemaRefeitorio.Forms
             btnSalvar.Enabled = false;
             btnAddFoto.Enabled = false;
             btnPesquisar.Enabled = false;
-
-        }
-
-        private void StudentForm_Load(object sender, EventArgs e)
-        {
-            tbRa.Focus();
-            tbRa.Text = String.Empty;
-            tbNome.Text = String.Empty;
-            tbEmail.Text = String.Empty;
-            mtbCpf.Text = String.Empty;
-            mtbTelefone.Text = String.Empty;
-            pbAluno.Image = null;
-
-            tbRa.Enabled = true;
-            tbNome.Enabled = false;
-            tbEmail.Enabled = false;
-            mtbCpf.Enabled = false;
-            mtbTelefone.Enabled = false;
-
-            btnNovo.Enabled = true;
-            btnPesquisar.Enabled = true;
-            btnSalvar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnCancelar.Enabled = false;
-            btnAddFoto.Enabled = false;
 
         }
     }
