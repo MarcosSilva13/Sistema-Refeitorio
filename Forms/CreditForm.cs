@@ -106,12 +106,7 @@ namespace SistemaRefeitorio.Forms
             {
                 MessageBox.Show("Crédito adicionado com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Save();
-            }
-            else
-            {
-                MessageBox.Show("Ocorreu um erro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            }   
         }
 
         private void BtnEditar_Click(object sender, EventArgs e)

@@ -60,7 +60,7 @@ namespace SistemaRefeitorio.Model.SQL
 
                 if (raStudent == 0)
                 {
-                    MessageBox.Show("Aluno não encontrado!", "Aviso");
+                    MessageBox.Show("Aluno não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return null;
                 }
 
@@ -93,6 +93,12 @@ namespace SistemaRefeitorio.Model.SQL
 
         public int UpdateCredit(Student student)
         {
+            if(student.CoffeCredit < 0 || student.LunchCredit < 0 || student.DinnerCredit < 0)
+            {
+                MessageBox.Show("Não é permitido valores negativos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return 0;
+            }
+
             try
             {
                 Connect();
@@ -115,8 +121,10 @@ namespace SistemaRefeitorio.Model.SQL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                throw ex;
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return 0;
+                //throw ex;
+
             }
             finally
             {

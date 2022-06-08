@@ -40,9 +40,9 @@ namespace SistemaRefeitorio.Model.SQL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                //return 0;
-                throw ex;
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return 0;
+                //throw ex;
             } 
             finally
             {
@@ -96,7 +96,7 @@ namespace SistemaRefeitorio.Model.SQL
 
                 if(raStudent == 0)
                 {
-                    MessageBox.Show("Aluno não encontrado!", "Aviso");
+                    MessageBox.Show("Aluno não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return null;
                 }
 
@@ -146,8 +146,9 @@ namespace SistemaRefeitorio.Model.SQL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                throw ex;
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //throw ex;
+                return 0;
             }
             finally
             {

@@ -100,11 +100,11 @@ namespace SistemaRefeitorio.Forms
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            /* if (tbRa.Text.Equals(String.Empty) || tbNome.Text.Equals(String.Empty) || tbEmail.Text.Equals(String.Empty) || mtbCpf.MaskCompleted)
-             {
+            if (tbRa.Text.Equals(String.Empty) || tbNome.Text.Equals(String.Empty) || tbEmail.Text.Equals(String.Empty) || mtbCpf.Text.Length < 14)
+            {
                  MessageBox.Show("Algum campo está vazio ou incompleto!", "Aviso");
                  return;
-             }*/
+            }
             
             byte[] imageByte = null;
 
@@ -126,10 +126,6 @@ namespace SistemaRefeitorio.Forms
                      MessageBox.Show("Novo aluno inserido com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                      Save();
                  }
-                 else
-                 {
-                    MessageBox.Show("Ocorreu um erro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 }
             }
             else
             {
@@ -137,10 +133,6 @@ namespace SistemaRefeitorio.Forms
                 {
                     MessageBox.Show("Dados do aluno atualizados com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Save();
-                }
-                else
-                {
-                    MessageBox.Show("Ocorreu um erro!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
