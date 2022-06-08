@@ -82,9 +82,7 @@ namespace SistemaRefeitorio.Forms
         }
         private void BtnNovo_Click(object sender, EventArgs e)
         {
-            //New();
             New();
-       
         }
 
         private void BtnAddFoto_Click(object sender, EventArgs e)
@@ -102,7 +100,7 @@ namespace SistemaRefeitorio.Forms
         {
             if (tbRa.Text.Equals(String.Empty) || tbNome.Text.Equals(String.Empty) || tbEmail.Text.Equals(String.Empty) || mtbCpf.Text.Length < 14)
             {
-                 MessageBox.Show("Algum campo está vazio ou incompleto!", "Aviso");
+                 MessageBox.Show("Algum campo está vazio ou incompleto!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                  return;
             }
             

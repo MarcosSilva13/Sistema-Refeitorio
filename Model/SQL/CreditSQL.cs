@@ -25,7 +25,6 @@ namespace SistemaRefeitorio.Model.SQL
 
             try
             {
-
                 Connect();
 
                 string select = "SELECT raStudent, name, email, cpf, coffeCredit, lunchCredit, " +
@@ -99,10 +98,12 @@ namespace SistemaRefeitorio.Model.SQL
                 return 0;
             }
 
+            Connect();
+
+            MySqlTransaction mySqlTransaction = SqlConnection.BeginTransaction();
+
             try
             {
-                Connect();
-
                 string update = "UPDATE students SET coffeCredit = @coffeCredit, lunchCredit = @lunchCredit," +
                                 "dinnerCredit = @dinnerCredit WHERE raStudent = @raStudent;";
 
@@ -115,12 +116,18 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@lunchCredit", student.LunchCredit);
                 cmd.Parameters.AddWithValue("@dinnerCredit", student.DinnerCredit);
 
+                cmd.Transaction = mySqlTransaction;
+
                 cmd.ExecuteNonQuery();
+
+                mySqlTransaction.Commit();
 
                 return 1;
             }
             catch (Exception ex)
             {
+                mySqlTransaction.Rollback();
+
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;

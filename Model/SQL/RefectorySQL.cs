@@ -88,10 +88,12 @@ namespace SistemaRefeitorio.Model.SQL
                 return 0;
             }
 
+            Connect();
+
+            MySqlTransaction mySqlTransaction = SqlConnection.BeginTransaction();
+
             try
             {
-                Connect();
-
                 string update = "UPDATE students SET coffeCredit = @coffeCredit " +
                                 "WHERE raStudent = @raStudent OR cpf = @cpf";
 
@@ -102,14 +104,19 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@raStudent", student.RaStudent);
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@coffeCredit", student.CoffeCredit-1);
-                
+
+                cmd.Transaction = mySqlTransaction;
 
                 cmd.ExecuteNonQuery();
+
+                mySqlTransaction.Commit();
 
                 return 1;
             }
             catch (Exception ex)
             {
+                mySqlTransaction.Rollback();
+
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;
@@ -127,10 +134,12 @@ namespace SistemaRefeitorio.Model.SQL
                 return 0;
             }
 
+            Connect();
+
+            MySqlTransaction mySqlTransaction = SqlConnection.BeginTransaction();
+
             try
             {
-                Connect();
-
                 string update = "UPDATE students SET lunchCredit = @lunchCredit " +
                                 "WHERE raStudent = @raStudent OR cpf = @cpf";
 
@@ -142,13 +151,18 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@lunchCredit", student.LunchCredit - 1);
 
+                cmd.Transaction = mySqlTransaction;
 
                 cmd.ExecuteNonQuery();
+
+                mySqlTransaction.Commit();
 
                 return 1;
             }
             catch (Exception ex)
             {
+                mySqlTransaction.Rollback();
+
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;
@@ -166,10 +180,12 @@ namespace SistemaRefeitorio.Model.SQL
                 return 0;
             }
 
+            Connect();
+
+            MySqlTransaction mySqlTransaction = SqlConnection.BeginTransaction();
+
             try
             {
-                Connect();
-
                 string update = "UPDATE students SET dinnerCredit = @dinnerCredit " +
                                 "WHERE raStudent = @raStudent OR cpf = @cpf";
 
@@ -181,13 +197,18 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@dinnerCredit", student.DinnerCredit - 1);
 
+                cmd.Transaction = mySqlTransaction;
 
                 cmd.ExecuteNonQuery();
+
+                mySqlTransaction.Commit();
 
                 return 1;
             }
             catch (Exception ex)
             {
+                mySqlTransaction.Rollback();
+
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;

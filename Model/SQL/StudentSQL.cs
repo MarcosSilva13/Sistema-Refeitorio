@@ -13,11 +13,13 @@ namespace SistemaRefeitorio.Model.SQL
     public class StudentSQL : Connection
     {
         public int Insert(Student student)
-        {     
+        {
+            Connect();
+
+            MySqlTransaction mySqlTransaction = SqlConnection.BeginTransaction();
+
             try
             {
-                Connect();
-
                 string insert = "INSERT INTO students (raStudent, name, email, cpf, telephone, picture, " +
                                 "picturePath) VALUES " +
                                 "(@raStudent, @name, @email, @cpf, @telephone, @picture, @picturePath)";
@@ -34,12 +36,18 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@picture", student.Picture);
                 cmd.Parameters.AddWithValue("@picturePath", student.PicturePath);
 
+                cmd.Transaction = mySqlTransaction;
+                
                 cmd.ExecuteNonQuery();
+                
+                mySqlTransaction.Commit();
 
                 return 1;
             }
             catch (Exception ex)
             {
+                mySqlTransaction.Rollback();
+
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;
@@ -60,10 +68,9 @@ namespace SistemaRefeitorio.Model.SQL
             string telephone = "";
             byte[] picture = null;
             string picturePath = "";
-            
+
             try
             {
-                
                 Connect();
 
                 string select = "SELECT raStudent, name, email, cpf, telephone, picture, picturePath, " +
@@ -120,10 +127,12 @@ namespace SistemaRefeitorio.Model.SQL
 
         public int Update(Student student)
         {
+            Connect();
+
+            MySqlTransaction mySqlTransaction = SqlConnection.BeginTransaction();
+
             try
             {
-                Connect();
-
                 string update = "UPDATE students SET name = @name, email = @email, cpf = @cpf," +
                                 "telephone = @telephone, picture = @picture, picturePath = @picturePath " +
                                 "WHERE raStudent = @raStudent;";
@@ -140,12 +149,17 @@ namespace SistemaRefeitorio.Model.SQL
                 cmd.Parameters.AddWithValue("@picture", student.Picture);
                 cmd.Parameters.AddWithValue("@picturePath", student.PicturePath);
 
+                cmd.Transaction = mySqlTransaction;
+
                 cmd.ExecuteNonQuery();
+
+                mySqlTransaction.Commit();
 
                 return 1;
             }
             catch (Exception ex)
             {
+                mySqlTransaction.Rollback();
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 //throw ex;
                 return 0;
