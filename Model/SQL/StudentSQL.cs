@@ -62,12 +62,12 @@ namespace SistemaRefeitorio.Model.SQL
         public Student GetData(Student student)
         {
             int raStudent = 0;
-            string name = "";
-            string email = "";
-            string cpf = "";
-            string telephone = "";
+            string name = String.Empty;
+            string email = String.Empty;
+            string cpf = String.Empty;
+            string telephone = String.Empty;
             byte[] picture = null;
-            string picturePath = "";
+            string picturePath = String.Empty;
 
             try
             {

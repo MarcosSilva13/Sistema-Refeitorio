@@ -17,7 +17,13 @@ namespace SistemaRefeitorio.Model.Entities
         }        public Student(string cpf)
         {
             Cpf = cpf;
-        }        public Student(int raStudent, string name, string cpf, byte[] picture, int coffeCredit, int lunchCredit, int dinnerCredit)
+        }        public Student(int raStudent, int coffeCredit, int lunchCredit, int dinnerCredit)
+        {
+            RaStudent = raStudent;
+            CoffeCredit = coffeCredit;
+            LunchCredit = lunchCredit;
+            DinnerCredit = dinnerCredit;
+        }        public Student(int raStudent, string name, string cpf, byte[] picture, int coffeCredit, int lunchCredit, int dinnerCredit)
         {
             RaStudent = raStudent;
             Name = name;
@@ -26,13 +32,7 @@ namespace SistemaRefeitorio.Model.Entities
             CoffeCredit = coffeCredit;
             LunchCredit = lunchCredit;
             DinnerCredit = dinnerCredit;
-        }        public Student(int raStudent, int coffeCredit, int lunchCredit, int dinnerCredit)
-        {
-            RaStudent = raStudent;
-            CoffeCredit = coffeCredit;
-            LunchCredit = lunchCredit;
-            DinnerCredit = dinnerCredit;
-        }        public Student(int raStudent, string name, string email, string cpf, string telephone, byte[] picture, string picturePath)
+        }        public Student(int raStudent, string name, string email, string cpf, string telephone, byte[] picture, string picturePath)
         {
             RaStudent = raStudent;
             Name = name;
@@ -41,7 +41,7 @@ namespace SistemaRefeitorio.Model.Entities
             Telephone = telephone;
             Picture = picture;
             PicturePath = picturePath;
-        }        //atualizar com o picture depois        public Student(int raStudent, string name, string email, string cpf, string telephone, int coffeCredit, int lunchCredit, int dinnerCredit, byte[] picture)
+        }        public Student(int raStudent, string name, string email, string cpf, string telephone, int coffeCredit, int lunchCredit, int dinnerCredit, byte[] picture)
         {
             RaStudent = raStudent;
             Name = name;
