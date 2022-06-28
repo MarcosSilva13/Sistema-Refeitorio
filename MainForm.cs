@@ -15,6 +15,7 @@ namespace SistemaRefeitorio
         StudentForm studentF = new StudentForm();
         RefectoryForm refectoryF = new RefectoryForm();
         CreditForm creditF = new CreditForm();
+        ListStudentForm listStudentF = new ListStudentForm();
         public MainForm()
         {
             InitializeComponent();
@@ -54,6 +55,11 @@ namespace SistemaRefeitorio
         private void SobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sistema Refeitório\nCopyright © All Right Reserved. Marcos Antônio", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ListaDeAlunosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listStudentF.ShowDialog();
         }
     }
 }

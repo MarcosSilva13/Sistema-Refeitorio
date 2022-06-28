@@ -24,3 +24,4 @@ C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de P
 C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.csproj.CopyComplete
 C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.Forms.CreditForm.resources
+C:\Users\marco\Documents\1arquivos Sistemas de informação\5º P\Linguagem de Programação II\Trabalho\SistemaRefeitorio\obj\x86\Debug\SistemaRefeitorio.Forms.ListStudentForm.resources

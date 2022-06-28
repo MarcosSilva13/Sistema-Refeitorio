@@ -33,6 +33,7 @@ namespace SistemaRefeitorio.Forms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAcesso = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblNumCredito = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnConfirmar = new System.Windows.Forms.Button();
@@ -41,7 +42,6 @@ namespace SistemaRefeitorio.Forms
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblRelogio = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).BeginInit();
@@ -87,10 +87,19 @@ namespace SistemaRefeitorio.Forms
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 20);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "CPF:";
+            // 
             // lblNumCredito
             // 
             this.lblNumCredito.AutoSize = true;
-            this.lblNumCredito.Location = new System.Drawing.Point(125, 34);
+            this.lblNumCredito.Location = new System.Drawing.Point(224, 34);
             this.lblNumCredito.Name = "lblNumCredito";
             this.lblNumCredito.Size = new System.Drawing.Size(19, 20);
             this.lblNumCredito.TabIndex = 14;
@@ -101,9 +110,9 @@ namespace SistemaRefeitorio.Forms
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(193, 20);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Nº Créditos:";
+            this.label2.Text = "Nº Créditos Restantes:";
             // 
             // btnConfirmar
             // 
@@ -165,15 +174,6 @@ namespace SistemaRefeitorio.Forms
             this.lblRelogio.Size = new System.Drawing.Size(128, 31);
             this.lblRelogio.TabIndex = 0;
             this.lblRelogio.Text = "00:00:00";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 20);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "CPF:";
             // 
             // RefectoryForm
             // 

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.CadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CadastrarAlunoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CadastrarCreditoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ListaDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.RefeitorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CafeDaManhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AlmocoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +49,7 @@
             this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CadastroToolStripMenuItem,
+            this.ListaDeAlunosToolStripMenuItem,
             this.RefeitorioToolStripMenuItem,
             this.SobreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -87,6 +88,13 @@
             this.SairToolStripMenuItem.Size = new System.Drawing.Size(235, 22);
             this.SairToolStripMenuItem.Text = "Sair";
             this.SairToolStripMenuItem.Click += new System.EventHandler(this.SairToolStripMenuItem_Click);
+            // 
+            // ListaDeAlunosToolStripMenuItem
+            // 
+            this.ListaDeAlunosToolStripMenuItem.Name = "ListaDeAlunosToolStripMenuItem";
+            this.ListaDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(108, 21);
+            this.ListaDeAlunosToolStripMenuItem.Text = "Lista de Alunos";
+            this.ListaDeAlunosToolStripMenuItem.Click += new System.EventHandler(this.ListaDeAlunosToolStripMenuItem_Click);
             // 
             // RefeitorioToolStripMenuItem
             // 
@@ -131,7 +139,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.menuStrip1);
@@ -159,6 +166,7 @@
         private System.Windows.Forms.ToolStripMenuItem CafeDaManhaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AlmocoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem JantarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ListaDeAlunosToolStripMenuItem;
     }
 }
 
