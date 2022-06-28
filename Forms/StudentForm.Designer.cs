@@ -157,7 +157,7 @@
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 287);
+            this.panel1.Location = new System.Drawing.Point(0, 297);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(724, 34);
             this.panel1.TabIndex = 22;
@@ -297,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(724, 321);
+            this.ClientSize = new System.Drawing.Size(724, 331);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pbAluno);
@@ -313,7 +313,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(740, 360);
+            this.MaximumSize = new System.Drawing.Size(740, 370);
             this.MinimizeBox = false;
             this.Name = "StudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

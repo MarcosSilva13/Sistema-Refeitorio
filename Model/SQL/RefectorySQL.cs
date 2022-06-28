@@ -13,9 +13,9 @@ namespace SistemaRefeitorio.Model.SQL
     {
         public Student GetData(Student student)
         {
-            int raStudent = 0;
-            string name = "";
-            string cpf = "";
+            int raStudent = -1;
+            string name = String.Empty;
+            string cpf = String.Empty;
             byte[] picture = null;
             int coffeCredit = 0;
             int lunchCredit = 0;
@@ -52,7 +52,7 @@ namespace SistemaRefeitorio.Model.SQL
                     dinnerCredit = reader.GetInt32(7);
                 }
 
-                if (raStudent == 0 || cpf.Equals(""))
+                if (raStudent == -1 || cpf.Equals(String.Empty))
                 {
                     MessageBox.Show("Aluno não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return null;
@@ -72,8 +72,9 @@ namespace SistemaRefeitorio.Model.SQL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                throw ex;
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //throw ex;
+                return null;
             }
             finally
             {
@@ -116,7 +117,6 @@ namespace SistemaRefeitorio.Model.SQL
             catch (Exception ex)
             {
                 mySqlTransaction.Rollback();
-
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;
@@ -162,7 +162,6 @@ namespace SistemaRefeitorio.Model.SQL
             catch (Exception ex)
             {
                 mySqlTransaction.Rollback();
-
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;
@@ -208,7 +207,6 @@ namespace SistemaRefeitorio.Model.SQL
             catch (Exception ex)
             {
                 mySqlTransaction.Rollback();
-
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;

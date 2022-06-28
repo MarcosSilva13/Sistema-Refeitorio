@@ -13,14 +13,14 @@ namespace SistemaRefeitorio.Model.SQL
     {
         public Student GetDataCredit(Student student)
         {
-            int raStudent = 0;
-            string name = "";
-            string email = "";
-            string cpf = "";
+            int raStudent = -1;
+            string name = String.Empty;
+            string email = String.Empty;
+            string cpf = String.Empty;
             int coffeCredit = 0;
             int lunchCredit = 0;
             int dinnerCredit = 0;
-            string telephone = "";
+            string telephone = String.Empty;
             byte[] picture = null;
 
             try
@@ -57,7 +57,7 @@ namespace SistemaRefeitorio.Model.SQL
                     }
                 }
 
-                if (raStudent == 0)
+                if (raStudent == -1)
                 {
                     MessageBox.Show("Aluno não encontrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return null;
@@ -80,8 +80,9 @@ namespace SistemaRefeitorio.Model.SQL
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                throw ex;
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //throw ex;
+                return null;
             }
             finally
             {
@@ -127,11 +128,9 @@ namespace SistemaRefeitorio.Model.SQL
             catch (Exception ex)
             {
                 mySqlTransaction.Rollback();
-
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return 0;
                 //throw ex;
-
             }
             finally
             {

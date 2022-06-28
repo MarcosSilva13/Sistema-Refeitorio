@@ -147,16 +147,6 @@ namespace SistemaRefeitorio.Forms
 
         }
 
-        private void groupBox2_Paint(object sender, PaintEventArgs p)
-        {
-            //ControlPaint.DrawBorder(p.Graphics, this.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
-            //ControlPaint.DrawBorder(p.Graphics, this.ClientRectangle, BorderStyle.FixedSingle);
-            /*GroupBox box = (GroupBox)sender;
-            p.Graphics.Clear(SystemColors.ControlDark);
-            p.Graphics.DrawString(box.Text, box.Font, Brushes.Black, 0, 0);
-            groupBox2.Paint += PaintBorderlessGroupBox;*/
-        }
-
         private void MtbCpfRef_TextChanged(object sender, EventArgs e)
         {
             if(mtbCpfRef.Text.Length == 14)

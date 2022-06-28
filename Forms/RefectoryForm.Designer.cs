@@ -155,7 +155,6 @@ namespace SistemaRefeitorio.Forms
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Relógio";
-            this.groupBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox2_Paint);
             // 
             // lblRelogio
             // 

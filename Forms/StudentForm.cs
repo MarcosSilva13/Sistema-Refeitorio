@@ -82,6 +82,7 @@ namespace SistemaRefeitorio.Forms
         }
         private void BtnNovo_Click(object sender, EventArgs e)
         {
+            ClearFotoPath();
             New();
         }
 
@@ -121,8 +122,9 @@ namespace SistemaRefeitorio.Forms
             {
                  if (studentSQL.Insert(studentF) == 1)
                  {
-                     MessageBox.Show("Novo aluno inserido com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                     Save();
+                    MessageBox.Show("Novo aluno inserido com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFotoPath();
+                    Save();
                  }
             }
             else
@@ -130,6 +132,7 @@ namespace SistemaRefeitorio.Forms
                 if(studentSQL.Update(studentF) == 1)
                 {
                     MessageBox.Show("Dados do aluno atualizados com sucesso!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearFotoPath();
                     Save();
                 }
             }
@@ -151,6 +154,11 @@ namespace SistemaRefeitorio.Forms
         {
             editing = false;
             this.Close();
+        }
+
+        private void ClearFotoPath()
+        {
+            foto = String.Empty;
         }
 
         private void New()
