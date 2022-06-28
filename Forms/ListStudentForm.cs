@@ -30,7 +30,7 @@ namespace SistemaRefeitorio.Forms
 
         private void ListStudentForm_Load(object sender, EventArgs e)
         {
-            tbRa.Text = String.Empty;
+            tbPesquisa.Text = String.Empty;
             btnVerTodos.Enabled = false;
 
             dgListStudent.Rows.Clear();
@@ -39,24 +39,63 @@ namespace SistemaRefeitorio.Forms
 
         private void BtnPesquisar_Click(object sender, EventArgs e)
         {
-            if (tbRa.Text.Equals(String.Empty))
+            if (cbPesquisa.Text.Equals("Ra"))
             {
-                MessageBox.Show("O campo \"Pesquisar por Ra\" está vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            } else
+                if (tbPesquisa.Text.Equals(String.Empty))
+                {
+                    MessageBox.Show("O campo para os valores não pode ser vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    btnVerTodos.Enabled = true;
+                    dgListStudent.Rows.Clear();
+                    listStudentSQL.GetDataByRa(dgListStudent, Convert.ToInt32(tbPesquisa.Text));
+                }
+            } 
+            else if (cbPesquisa.Text.Equals("Nome"))
             {
-                btnVerTodos.Enabled = true;
-                dgListStudent.Rows.Clear();
-                listStudentSQL.GetDataByRa(dgListStudent, Convert.ToInt32(tbRa.Text));
+                if (tbPesquisa.Text.Equals(String.Empty))
+                {
+                    MessageBox.Show("O campo para os valores não pode ser vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    btnVerTodos.Enabled = true;
+                    dgListStudent.Rows.Clear();
+                    listStudentSQL.GetDataByName(dgListStudent, tbPesquisa.Text);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma opção válida de pesquisa!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void BtnVerTodos_Click(object sender, EventArgs e)
         {
-            tbRa.Text = String.Empty;
+            tbPesquisa.Text = String.Empty;
             btnVerTodos.Enabled = false;
 
             dgListStudent.Rows.Clear();
             listStudentSQL.GetDataStudent(dgListStudent);
+        }
+
+        private void CbPesquisa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbPesquisa.Text.Equals("Ra"))
+            {
+                lblTips.Text = "Digite apenas números";
+            }
+            else if (cbPesquisa.Text.Equals("Nome"))
+            {
+                lblTips.Text = "Digite apenas texto";
+                
+            }
+            else
+            {
+                lblTips.Text = String.Empty;
+            }
+
         }
     }
 }

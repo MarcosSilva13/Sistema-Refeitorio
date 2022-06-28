@@ -49,9 +49,11 @@ namespace SistemaRefeitorio.Forms
             this.Lunch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Dinner = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbRa = new System.Windows.Forms.TextBox();
+            this.tbPesquisa = new System.Windows.Forms.TextBox();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.btnVerTodos = new System.Windows.Forms.Button();
+            this.cbPesquisa = new System.Windows.Forms.ComboBox();
+            this.lblTips = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgListStudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,12 +81,12 @@ namespace SistemaRefeitorio.Forms
             this.Coffe,
             this.Lunch,
             this.Dinner});
-            this.dgListStudent.Location = new System.Drawing.Point(12, 98);
+            this.dgListStudent.Location = new System.Drawing.Point(12, 99);
             this.dgListStudent.Name = "dgListStudent";
             this.dgListStudent.ReadOnly = true;
             this.dgListStudent.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgListStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgListStudent.Size = new System.Drawing.Size(760, 251);
+            this.dgListStudent.Size = new System.Drawing.Size(760, 270);
             this.dgListStudent.TabIndex = 0;
             // 
             // Ra
@@ -185,19 +187,19 @@ namespace SistemaRefeitorio.Forms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 44);
+            this.label1.Location = new System.Drawing.Point(129, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 20);
+            this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Pesquisar por RA:";
+            this.label1.Text = "Pesquisar por:";
             // 
-            // tbRa
+            // tbPesquisa
             // 
-            this.tbRa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbRa.Location = new System.Drawing.Point(279, 41);
-            this.tbRa.Name = "tbRa";
-            this.tbRa.Size = new System.Drawing.Size(116, 26);
-            this.tbRa.TabIndex = 2;
+            this.tbPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPesquisa.Location = new System.Drawing.Point(326, 41);
+            this.tbPesquisa.Name = "tbPesquisa";
+            this.tbPesquisa.Size = new System.Drawing.Size(116, 26);
+            this.tbPesquisa.TabIndex = 2;
             // 
             // btnPesquisar
             // 
@@ -206,7 +208,7 @@ namespace SistemaRefeitorio.Forms
             this.btnPesquisar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(410, 39);
+            this.btnPesquisar.Location = new System.Drawing.Point(457, 39);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(116, 30);
             this.btnPesquisar.TabIndex = 24;
@@ -231,18 +233,42 @@ namespace SistemaRefeitorio.Forms
             this.btnVerTodos.UseVisualStyleBackColor = false;
             this.btnVerTodos.Click += new System.EventHandler(this.BtnVerTodos_Click);
             // 
+            // cbPesquisa
+            // 
+            this.cbPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbPesquisa.FormattingEnabled = true;
+            this.cbPesquisa.Items.AddRange(new object[] {
+            "Ra",
+            "Nome"});
+            this.cbPesquisa.Location = new System.Drawing.Point(245, 41);
+            this.cbPesquisa.Name = "cbPesquisa";
+            this.cbPesquisa.Size = new System.Drawing.Size(75, 26);
+            this.cbPesquisa.TabIndex = 29;
+            this.cbPesquisa.SelectedIndexChanged += new System.EventHandler(this.CbPesquisa_SelectedIndexChanged);
+            // 
+            // lblTips
+            // 
+            this.lblTips.AutoSize = true;
+            this.lblTips.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.lblTips.Location = new System.Drawing.Point(323, 25);
+            this.lblTips.Name = "lblTips";
+            this.lblTips.Size = new System.Drawing.Size(0, 13);
+            this.lblTips.TabIndex = 30;
+            // 
             // ListStudentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.ClientSize = new System.Drawing.Size(784, 381);
+            this.Controls.Add(this.lblTips);
+            this.Controls.Add(this.cbPesquisa);
             this.Controls.Add(this.btnVerTodos);
             this.Controls.Add(this.btnPesquisar);
-            this.Controls.Add(this.tbRa);
+            this.Controls.Add(this.tbPesquisa);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgListStudent);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(800, 400);
+            this.MaximumSize = new System.Drawing.Size(800, 420);
             this.MinimizeBox = false;
             this.Name = "ListStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -266,8 +292,10 @@ namespace SistemaRefeitorio.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Lunch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dinner;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbRa;
+        private System.Windows.Forms.TextBox tbPesquisa;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnVerTodos;
+        private System.Windows.Forms.ComboBox cbPesquisa;
+        private System.Windows.Forms.Label lblTips;
     }
 }

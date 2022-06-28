@@ -99,6 +99,12 @@ namespace SistemaRefeitorio.Forms
         }
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
+            if(tbCafe.Text.Equals(String.Empty) || tbAlmoco.Text.Equals(String.Empty) || tbJanta.Text.Equals(String.Empty))
+            {
+                MessageBox.Show("O Campo não pode ser vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             studentF = new Student(Convert.ToInt32(tbRa.Text), Convert.ToInt32(tbCafe.Text),
                         Convert.ToInt32(tbAlmoco.Text), Convert.ToInt32(tbJanta.Text));
 
