@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SistemaRefeitorio.Model.Entities;
 using SistemaRefeitorio.Model.SQL;
@@ -150,8 +143,6 @@ namespace SistemaRefeitorio.Forms
             btnEditar.Enabled = false;
             btnCancelar.Enabled = false;
             btnPesquisar.Enabled = true;
-
-
         }
 
         private void Cancel()

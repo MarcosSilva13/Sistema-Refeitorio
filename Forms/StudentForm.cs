@@ -234,7 +234,6 @@ namespace SistemaRefeitorio.Forms
             btnCancelar.Enabled = true;
             btnAddFoto.Enabled = true;
             btnPesquisar.Enabled = false;
-            
         }
 
         private void Search()

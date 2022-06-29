@@ -1,9 +1,5 @@
 ﻿using MySqlConnector;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SistemaRefeitorio.Model.Entities;
 using System.Windows.Forms;
 
@@ -58,13 +54,7 @@ namespace SistemaRefeitorio.Model.SQL
                     return null;
                 }
 
-                Student studentF = new Student(raStudent,
-                                               name,
-                                               cpf,
-                                               picture,
-                                               coffeCredit,
-                                               lunchCredit,
-                                               dinnerCredit);
+                Student studentF = new Student(raStudent, name, cpf, picture, coffeCredit, lunchCredit, dinnerCredit);
 
                 reader.Close();
 
@@ -104,7 +94,7 @@ namespace SistemaRefeitorio.Model.SQL
 
                 cmd.Parameters.AddWithValue("@raStudent", student.RaStudent);
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
-                cmd.Parameters.AddWithValue("@coffeCredit", student.CoffeCredit-1);
+                cmd.Parameters.AddWithValue("@coffeCredit", student.CoffeCredit - 1);
 
                 cmd.Transaction = mySqlTransaction;
 

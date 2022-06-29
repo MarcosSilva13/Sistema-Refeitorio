@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SistemaRefeitorio.Model.Entities;
 using SistemaRefeitorio.Model.SQL;
 using System.Windows.Forms;
 
@@ -74,10 +66,13 @@ namespace SistemaRefeitorio.Forms
         private void BtnVerTodos_Click(object sender, EventArgs e)
         {
             tbPesquisa.Text = String.Empty;
+            cbPesquisa.Text = String.Empty;
+            lblTips.Text = String.Empty;
             btnVerTodos.Enabled = false;
 
             dgListStudent.Rows.Clear();
             listStudentSQL.GetDataStudent(dgListStudent);
+            MessageBox.Show("Total de cadastros: " + dgListStudent.Rows.Count);
         }
 
         private void CbPesquisa_SelectedIndexChanged(object sender, EventArgs e)
