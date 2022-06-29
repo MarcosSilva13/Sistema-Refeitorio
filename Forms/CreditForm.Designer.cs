@@ -54,6 +54,7 @@ namespace SistemaRefeitorio.Forms
             this.btnSair = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnAjudaCredito = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -347,11 +348,29 @@ namespace SistemaRefeitorio.Forms
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
+            // btnAjudaCredito
+            // 
+            this.btnAjudaCredito.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAjudaCredito.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjudaCredito.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAjudaCredito.Image = ((System.Drawing.Image)(resources.GetObject("btnAjudaCredito.Image")));
+            this.btnAjudaCredito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAjudaCredito.Location = new System.Drawing.Point(629, 254);
+            this.btnAjudaCredito.Name = "btnAjudaCredito";
+            this.btnAjudaCredito.Size = new System.Drawing.Size(74, 28);
+            this.btnAjudaCredito.TabIndex = 44;
+            this.btnAjudaCredito.Text = "Ajuda";
+            this.btnAjudaCredito.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAjudaCredito.UseCompatibleTextRendering = true;
+            this.btnAjudaCredito.UseVisualStyleBackColor = false;
+            this.btnAjudaCredito.Click += new System.EventHandler(this.BtnAjudaCredito_Click);
+            // 
             // CreditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 331);
+            this.Controls.Add(this.btnAjudaCredito);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbJanta);
             this.Controls.Add(this.tbAlmoco);
@@ -411,5 +430,6 @@ namespace SistemaRefeitorio.Forms
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnAjudaCredito;
     }
 }

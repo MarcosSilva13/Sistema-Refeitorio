@@ -123,6 +123,12 @@ namespace SistemaRefeitorio.Forms
             this.Close();
         }
 
+        private void BtnAjudaCredito_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ao clicar em \"Novo\" só é possível fazer uma nova pesquisa\n" +
+                            "Ao clicar em \"Editar\" só é possível editar o número de créditos do estudante!", 
+                            "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         private void New()
         {
             tbRa.Text = String.Empty;
@@ -200,5 +206,7 @@ namespace SistemaRefeitorio.Forms
             btnPesquisar.Enabled = false;
 
         }
+
+        
     }
 }
