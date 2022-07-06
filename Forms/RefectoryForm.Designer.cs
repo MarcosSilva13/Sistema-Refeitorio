@@ -42,6 +42,8 @@ namespace SistemaRefeitorio.Forms
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblRelogio = new System.Windows.Forms.Label();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblStatusAcesso = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAluno)).BeginInit();
@@ -74,6 +76,7 @@ namespace SistemaRefeitorio.Forms
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblStatusAcesso);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.lblNumCredito);
             this.groupBox3.Controls.Add(this.label2);
@@ -82,7 +85,7 @@ namespace SistemaRefeitorio.Forms
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(448, 142);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(262, 111);
+            this.groupBox3.Size = new System.Drawing.Size(262, 137);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados";
@@ -90,7 +93,7 @@ namespace SistemaRefeitorio.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 76);
+            this.label1.Location = new System.Drawing.Point(16, 108);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 14;
@@ -99,7 +102,7 @@ namespace SistemaRefeitorio.Forms
             // lblNumCredito
             // 
             this.lblNumCredito.AutoSize = true;
-            this.lblNumCredito.Location = new System.Drawing.Point(224, 34);
+            this.lblNumCredito.Location = new System.Drawing.Point(226, 60);
             this.lblNumCredito.Name = "lblNumCredito";
             this.lblNumCredito.Size = new System.Drawing.Size(19, 20);
             this.lblNumCredito.TabIndex = 14;
@@ -108,7 +111,7 @@ namespace SistemaRefeitorio.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 34);
+            this.label2.Location = new System.Drawing.Point(17, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(193, 20);
             this.label2.TabIndex = 13;
@@ -118,7 +121,7 @@ namespace SistemaRefeitorio.Forms
             // 
             this.btnConfirmar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Location = new System.Drawing.Point(196, 73);
+            this.btnConfirmar.Location = new System.Drawing.Point(198, 105);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(47, 26);
             this.btnConfirmar.TabIndex = 12;
@@ -130,7 +133,7 @@ namespace SistemaRefeitorio.Forms
             // mtbCpfRef
             // 
             this.mtbCpfRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCpfRef.Location = new System.Drawing.Point(68, 73);
+            this.mtbCpfRef.Location = new System.Drawing.Point(70, 105);
             this.mtbCpfRef.Mask = "###,###,###-##";
             this.mtbCpfRef.Name = "mtbCpfRef";
             this.mtbCpfRef.Size = new System.Drawing.Size(122, 26);
@@ -140,9 +143,9 @@ namespace SistemaRefeitorio.Forms
             // pbAluno
             // 
             this.pbAluno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbAluno.Location = new System.Drawing.Point(56, 12);
+            this.pbAluno.Location = new System.Drawing.Point(46, 12);
             this.pbAluno.Name = "pbAluno";
-            this.pbAluno.Size = new System.Drawing.Size(304, 241);
+            this.pbAluno.Size = new System.Drawing.Size(338, 267);
             this.pbAluno.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAluno.TabIndex = 3;
             this.pbAluno.TabStop = false;
@@ -155,6 +158,7 @@ namespace SistemaRefeitorio.Forms
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox2.Controls.Add(this.lblData);
             this.groupBox2.Controls.Add(this.lblRelogio);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,17 +167,36 @@ namespace SistemaRefeitorio.Forms
             this.groupBox2.Size = new System.Drawing.Size(263, 100);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Relógio";
+            this.groupBox2.Text = "Hora/Data";
             // 
             // lblRelogio
             // 
             this.lblRelogio.AutoSize = true;
-            this.lblRelogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRelogio.Location = new System.Drawing.Point(67, 35);
+            this.lblRelogio.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelogio.Location = new System.Drawing.Point(16, 22);
             this.lblRelogio.Name = "lblRelogio";
-            this.lblRelogio.Size = new System.Drawing.Size(128, 31);
+            this.lblRelogio.Size = new System.Drawing.Size(104, 25);
             this.lblRelogio.TabIndex = 0;
             this.lblRelogio.Text = "00:00:00";
+            // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.Location = new System.Drawing.Point(16, 66);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(130, 25);
+            this.lblData.TabIndex = 1;
+            this.lblData.Text = "00/00/0000";
+            // 
+            // lblStatusAcesso
+            // 
+            this.lblStatusAcesso.AutoSize = true;
+            this.lblStatusAcesso.Location = new System.Drawing.Point(17, 19);
+            this.lblStatusAcesso.Name = "lblStatusAcesso";
+            this.lblStatusAcesso.Size = new System.Drawing.Size(119, 20);
+            this.lblStatusAcesso.TabIndex = 15;
+            this.lblStatusAcesso.Text = "Acesso para: ";
             // 
             // RefectoryForm
             // 
@@ -218,5 +241,7 @@ namespace SistemaRefeitorio.Forms
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblRelogio;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblData;
+        private System.Windows.Forms.Label lblStatusAcesso;
     }
 }

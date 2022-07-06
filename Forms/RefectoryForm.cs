@@ -9,7 +9,7 @@ namespace SistemaRefeitorio.Forms
     public partial class RefectoryForm : Form
     {
         Student studentF;
-        RefectorySQL refSQL;
+        RefectorySQL refSQL = new RefectorySQL();
         
         string status = String.Empty;
         public RefectoryForm()
@@ -19,24 +19,32 @@ namespace SistemaRefeitorio.Forms
 
         private void Timer1_Tick(object sender, EventArgs e)
         {
-            lblRelogio.Text = DateTime.Now.ToString("T");
+            lblRelogio.Text = "Hora: " + DateTime.Now.ToString("T");
         }
 
         private void RefectoryForm_Load(object sender, EventArgs e)
         {
+            status = this.Text;
+
+            lblData.Text = "Data: " + DateTime.Today.ToString("d");
+            lblStatusAcesso.Text = "Acesso para: " + status;
+
             lblAcesso.Text = String.Empty;
             lblNumCredito.Text = "0";
             pbAluno.Image = null;
             mtbCpfRef.Text = String.Empty;
             mtbCpfRef.Focus();
-
-            status = this.Text;
-            
         }
         private void BtnConfirmar_Click(object sender, EventArgs e)
         {
+            if(mtbCpfRef.Text.Length < 14)
+            {
+                MessageBox.Show("Cpf inválido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mtbCpfRef.Text = String.Empty;
+                mtbCpfRef.Focus();
+                return;
+            }
             studentF = new Student(mtbCpfRef.Text);
-            refSQL = new RefectorySQL();
             
             studentF = refSQL.GetData(studentF);
 
@@ -55,7 +63,6 @@ namespace SistemaRefeitorio.Forms
             {
                 MemoryStream mstream = new MemoryStream(studentF.Picture);
                 pbAluno.Image = System.Drawing.Image.FromStream(mstream);
-
             }
 
             if(status.Equals("Café da manhã"))
@@ -70,7 +77,6 @@ namespace SistemaRefeitorio.Forms
             {
                 UpdateDinner();
             }
-
         }
 
         private void UpdateCoffee()
@@ -114,8 +120,7 @@ namespace SistemaRefeitorio.Forms
                 mtbCpfRef.Focus();
 
                 MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            
+            } 
         }
 
         private void UpdateDinner()
@@ -138,7 +143,6 @@ namespace SistemaRefeitorio.Forms
 
                 MessageBox.Show("O aluno não tem mais créditos para " + status + "!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         private void MtbCpfRef_TextChanged(object sender, EventArgs e)

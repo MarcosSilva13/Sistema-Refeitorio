@@ -128,6 +128,18 @@
         jcWwyowm1DPrk15AF39hEv8OF9vlD2VkJIYeh2HsAAAAAElFTkSuQmCC
 </value>
   </data>
+  <data name="btnAjudaCredito.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAWtJREFUOE+1
+        U8tKw0AUzQ+of6BJEGr9AQXxA8SNuNB/cOHS18KlHyBNYsCqjSIoFMGNiLhRcGWh1aUKha5ELDKT9JGa
+        XO80kzqTtDs9cGCYc8+dOZMb5V8wukcndZNs6pZ72CWuxwya5fJg6HZ9RLXoqWbSEAkJhppBT8Z3P4d5
+        uQxm1iz61MeYZKVvE35yr3D+vAG5UhtM5GLRExsgicNtEVhmFHrXniq48FoP4Lbagas3H6pfAcw4UpNQ
+        tckEtysKdtwSRJg788B59mH22IOFYgNqJIClC/kWukU2uB3z40uLYsyMTbs3uK91IItrUVMNN8/tmN90
+        D0Qx5s5DC8rv3zB95KY0zXT3uT0dIeb2XQtWb5qpfUYpAhsS3Ex9+5XrJiwnsnMG0iMysCFJFl6++JB7
+        bEt7EUmB237BhgPFilioC2uB5Uz+Y4jbZERNiINF/UY5YCcPNItg+VSTrMc/k2qQtVTmv4Gi/AD38qtr
+        vqxQeQAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnEditar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAOpJREFUOE/N
@@ -155,18 +167,6 @@
         SDTgP1QbAoAEtZv3gg2Yt+0I3ACYF9YC2f4LruE3gBQM1YYA2BThw1BtCAAS/Pnn339CAKQGpwEg8Ord
         +//3n77AikFyIEBbA758+/7//afPWDFIDgRoZ0Dh9mf/K3Y9x4tBarAaMECAgQEA7pvB6SdRuGoAAAAA
         SUVORK5CYII=
-</value>
-  </data>
-  <data name="btnAjudaCredito.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAFrSURBVDhPtVPLSsNAFM0PqH+gSRBq/QEF8QPEjbjQf3Dh0tfCpR8gTWLAqo0iKBTBjYi4UXBl
-        odWlCoWuRCwyk/SRmlzvNJM6k7Q7PXBgmHPPnTmTG+VfMLpHJ3WTbOqWe9glrscMmuXyYOh2fUS16Klm
-        0hAJCYaaQU/Gdz+HebkMZtYs+tTHmGSlbxN+cq9w/rwBuVIbTORi0RMbIInDbRFYZhR6154quPBaD+C2
-        2oGrNx+qXwHMOFKTULXJBLcrCnbcEkSYO/PAefZh9tiDhWIDaiSApQv5FrpFNrgd8+NLi2LMjE27N7iv
-        dSCLa1FTDTfP7ZjfdA9EMebOQwvK798wfeSmNM1097k9HSHm9l0LVm+aqX1GKQIbEtxMffuV6yYsJ7Jz
-        BtIjMrAhSRZevviQe2xLexFJgdt+wYYDxYpYqAtrgeVM/mOI22RETYiDRf1GOWAnDzSLYPlUk6zHP5Nq
-        kLVU5r+BovwA9/Kra76sUHkAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

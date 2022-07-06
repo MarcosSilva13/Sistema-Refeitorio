@@ -107,7 +107,7 @@ namespace SistemaRefeitorio.Forms
             
             byte[] imageByte = null;
 
-            if (!foto.Equals(""))
+            if (!foto.Equals(String.Empty))
             {
                 FileStream fstream = new FileStream(foto, FileMode.Open, FileAccess.Read);
 

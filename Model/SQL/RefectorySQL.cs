@@ -86,13 +86,12 @@ namespace SistemaRefeitorio.Model.SQL
             try
             {
                 string update = "UPDATE students SET coffeCredit = @coffeCredit " +
-                                "WHERE raStudent = @raStudent OR cpf = @cpf";
+                                "WHERE cpf = @cpf";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
 
                 cmd.Prepare();
 
-                cmd.Parameters.AddWithValue("@raStudent", student.RaStudent);
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@coffeCredit", student.CoffeCredit - 1);
 
@@ -131,13 +130,12 @@ namespace SistemaRefeitorio.Model.SQL
             try
             {
                 string update = "UPDATE students SET lunchCredit = @lunchCredit " +
-                                "WHERE raStudent = @raStudent OR cpf = @cpf";
+                                "WHERE cpf = @cpf";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
 
                 cmd.Prepare();
 
-                cmd.Parameters.AddWithValue("@raStudent", student.RaStudent);
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@lunchCredit", student.LunchCredit - 1);
 
@@ -176,13 +174,12 @@ namespace SistemaRefeitorio.Model.SQL
             try
             {
                 string update = "UPDATE students SET dinnerCredit = @dinnerCredit " +
-                                "WHERE raStudent = @raStudent OR cpf = @cpf";
+                                "WHERE cpf = @cpf";
 
                 MySqlCommand cmd = new MySqlCommand(update, SqlConnection);
 
                 cmd.Prepare();
 
-                cmd.Parameters.AddWithValue("@raStudent", student.RaStudent);
                 cmd.Parameters.AddWithValue("@cpf", student.Cpf);
                 cmd.Parameters.AddWithValue("@dinnerCredit", student.DinnerCredit - 1);
 

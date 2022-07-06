@@ -10,8 +10,10 @@ namespace SistemaRefeitorio.Model.Entities
     public class Student
     {
         public int RaStudent { get; set; }
+
         public string Name { get; set; }
-        public string Email { get; set; }        public string Cpf { get; set; }        public string Telephone { get; set; }        public int CoffeCredit { get; set; }        public int LunchCredit { get; set; }        public int DinnerCredit { get; set; }        public byte[] Picture { get; set; }        public string PicturePath { get; set; }        public Student(){ }        public Student(int raStudent)
+
+        public string Email { get; set; }        public string Cpf { get; set; }        public string Telephone { get; set; }        public int CoffeCredit { get; set; }        public int LunchCredit { get; set; }        public int DinnerCredit { get; set; }        public byte[] Picture { get; set; }        public string PicturePath { get; set; }        public Student(){ }        public Student(int raStudent)
         {
             RaStudent = raStudent;
         }        public Student(string cpf)

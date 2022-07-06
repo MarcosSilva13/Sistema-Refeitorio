@@ -72,7 +72,6 @@ namespace SistemaRefeitorio.Forms
 
             dgListStudent.Rows.Clear();
             listStudentSQL.GetDataStudent(dgListStudent);
-            MessageBox.Show("Total de cadastros: " + dgListStudent.Rows.Count);
         }
 
         private void CbPesquisa_SelectedIndexChanged(object sender, EventArgs e)
@@ -84,13 +83,11 @@ namespace SistemaRefeitorio.Forms
             else if (cbPesquisa.Text.Equals("Nome"))
             {
                 lblTips.Text = "Digite apenas texto";
-                
             }
             else
             {
                 lblTips.Text = String.Empty;
             }
-
         }
     }
 }

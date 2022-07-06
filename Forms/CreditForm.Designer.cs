@@ -248,6 +248,7 @@ namespace SistemaRefeitorio.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.btnAjudaCredito);
             this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.btnNovo);
             this.panel1.Controls.Add(this.btnSair);
@@ -267,7 +268,7 @@ namespace SistemaRefeitorio.Forms
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(315, 3);
+            this.btnEditar.Location = new System.Drawing.Point(266, 3);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(74, 28);
             this.btnEditar.TabIndex = 22;
@@ -285,7 +286,7 @@ namespace SistemaRefeitorio.Forms
             this.btnNovo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnNovo.Image = global::SistemaRefeitorio.Properties.Resources.icons8_arquivo_ios_16;
             this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovo.Location = new System.Drawing.Point(103, 3);
+            this.btnNovo.Location = new System.Drawing.Point(54, 3);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(74, 28);
             this.btnNovo.TabIndex = 17;
@@ -302,7 +303,7 @@ namespace SistemaRefeitorio.Forms
             this.btnSair.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSair.Image = global::SistemaRefeitorio.Properties.Resources.icons8_sair_office_16;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(548, 3);
+            this.btnSair.Location = new System.Drawing.Point(499, 3);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(74, 28);
             this.btnSair.TabIndex = 21;
@@ -320,7 +321,7 @@ namespace SistemaRefeitorio.Forms
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(421, 3);
+            this.btnCancelar.Location = new System.Drawing.Point(372, 3);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(95, 28);
             this.btnCancelar.TabIndex = 20;
@@ -338,7 +339,7 @@ namespace SistemaRefeitorio.Forms
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(209, 3);
+            this.btnSalvar.Location = new System.Drawing.Point(160, 3);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(74, 28);
             this.btnSalvar.TabIndex = 16;
@@ -355,7 +356,7 @@ namespace SistemaRefeitorio.Forms
             this.btnAjudaCredito.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAjudaCredito.Image = ((System.Drawing.Image)(resources.GetObject("btnAjudaCredito.Image")));
             this.btnAjudaCredito.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAjudaCredito.Location = new System.Drawing.Point(629, 254);
+            this.btnAjudaCredito.Location = new System.Drawing.Point(605, 3);
             this.btnAjudaCredito.Name = "btnAjudaCredito";
             this.btnAjudaCredito.Size = new System.Drawing.Size(74, 28);
             this.btnAjudaCredito.TabIndex = 44;
@@ -370,7 +371,6 @@ namespace SistemaRefeitorio.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(724, 331);
-            this.Controls.Add(this.btnAjudaCredito);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tbJanta);
             this.Controls.Add(this.tbAlmoco);

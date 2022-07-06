@@ -55,7 +55,6 @@ namespace SistemaRefeitorio.Forms
 
             studentF = new Student(Convert.ToInt32(tbRa.Text));
            
-
             studentF = creditSQL.GetDataCredit(studentF);
 
             if(studentF == null)
@@ -125,7 +124,7 @@ namespace SistemaRefeitorio.Forms
 
         private void BtnAjudaCredito_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ao clicar em \"Novo\" só é possível fazer uma nova pesquisa\n" +
+            MessageBox.Show("Ao clicar em \"Novo\" só é possível fazer uma nova pesquisa!\n\n" +
                             "Ao clicar em \"Editar\" só é possível editar o número de créditos do estudante!", 
                             "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -187,6 +186,7 @@ namespace SistemaRefeitorio.Forms
             tbCafe.Enabled = true;
             tbAlmoco.Enabled = true;
             tbJanta.Enabled = true;
+            tbCafe.Focus();
 
             btnNovo.Enabled = false;
             btnSalvar.Enabled = true;

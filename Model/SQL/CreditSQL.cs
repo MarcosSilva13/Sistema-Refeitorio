@@ -59,15 +59,7 @@ namespace SistemaRefeitorio.Model.SQL
                     return null;
                 }
 
-                Student studentF = new Student(raStudent,
-                                               name,
-                                               email,
-                                               cpf,
-                                               telephone,
-                                               coffeCredit,
-                                               lunchCredit,
-                                               dinnerCredit,
-                                               picture);
+                Student studentF = new Student(raStudent, name, email, cpf, telephone, coffeCredit, lunchCredit, dinnerCredit, picture);
 
                 reader.Close();
 

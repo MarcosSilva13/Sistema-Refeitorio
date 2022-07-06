@@ -272,7 +272,7 @@ namespace SistemaRefeitorio.Forms
             this.MinimizeBox = false;
             this.Name = "ListStudentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lista dos Estudantes";
+            this.Text = "Lista dos Alunos";
             this.Load += new System.EventHandler(this.ListStudentForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgListStudent)).EndInit();
             this.ResumeLayout(false);
